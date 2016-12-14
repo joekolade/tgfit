@@ -25,10 +25,23 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '7.6.0-8.99.99',
+			'gridelements' => '',
+			'mask' => '',
+			'realurl' => '',
+			'dd_googlesitemap' => '',
+			't3monitoring_client' => '',
+			'cs_seo' => '',
+			'sourceopt' => '',
+			'scriptmerger' => '',
+			// Sysextensions
+			'opendocs' => '',
+			'recycler' => '',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
+			'rx_unrollsavebuttons' => '',
+			'go_maps_ext' => '',
 		),
 	),
 );
