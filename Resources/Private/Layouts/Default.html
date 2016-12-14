@@ -2,44 +2,16 @@
 <body>
     <div id="page">
         <!--[if lt IE 10]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
-        <header class="container">
-            <div class="row">
-                <div class="col-xs-9 col-sm-4">
-                    <a class="logo" href="/"><img src="images/tgfit_logo.svg" height="62" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-8 hidden-xs">
-                    <nav id="navmenu">
-                        <ul class="list-inline">
-                            <li><a href="#">Kursangebot</a>
-                                <ul class="subnav">
-                                    <li><a href="#">Gesund &amp; Fit</a></li>
-                                    <li><a href="#">For for Live</a></li>
-                                    <li><a href="#">Reha-Fit</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#"><span class="hidden-xs">Betriebliches Gesundheitsmanagement</span><span class="visible-xs">BGM</span></a></li>
-                            <li class="active"><a href="#">Informationen</a>
-                                <ul class="subnav">
-                                    <li><a href="#">Anmeldung</a></li>
-                                    <li class="active"><a href="#">Krankenkassen-Erstattung</a></li>
-                                    <li><a href="#">Sportmedizinische Untersuchung</a></li>
-                                    <li><a href="#">Sportstätten</a></li>
-                                    <li><a href="#">Übungshelfer-Team</a></li>
-                                    <li><a href="#">Zertifizierungen</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Impressum</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-xs-3 visible-xs"><a href="#navmenu" class="menuToggle"><i class="fa fa-bars"></i></a></div>
-            </div>
-        </header>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <f:render partial="Header" arguments="{_all}" />
+
 
         <section class="container stage">
-            <div class="stage__item"><img src="images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
+            
+            {stage -> f:format.raw()}
+            
         </section>
         
         
@@ -89,32 +61,8 @@
                 </div>
             </div>
         </section>
-        <!-- Footer -->
-        <section class="footer container-fluid">
-            <footer class="container">
-                <div class="row">
-                    <div class="col-sm-4"><img src="images/TGLogo.svg" alt="" class="img-responsive"></div>
-                    <div class="col-sm-4">
-                        <p><b>Turngemeinde Biberach 1847 e.V.</b>
-                            <br>Adenauerallee 11
-                            <br>88400 Biberach
-                            <br>Telefon 07351/71855
-                            <br>Telefax 07351/14462
-                            <br>geschaeftsstelle@tg-biberach.de
-                            <br>www.tg-biberach.de</p>
-                    </div>
-                    <div class="col-sm-4"><b>Info-Themen</b>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Anmeldung</a></li>
-                            <li class="active"><a href="#">Krankenkassen-Erstattung</a></li>
-                            <li><a href="#">Sportmedizinische Untersuchung</a></li>
-                            <li><a href="#">Sportstätten</a></li>
-                            <li><a href="#">Übungshelfer-Team</a></li>
-                            <li><a href="#">Zertifizierungen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-        </section>
+        
+        <f:render partial="Footer" arguments="{_all}" />
+
     </div>
 </body>

@@ -48,3 +48,28 @@ page {
    main = EXT:tgfit/Resources/Public/JavaScript/main.js
  }
 }
+
+/**
+ * Template Variables
+ * 
+ */
+page.10.variables {
+  
+  sitename = TEXT
+  sitename.value = TG Fit
+
+  logo = IMG_RESOURCE
+  logo {
+    file = EXT:tgfit/Resources/Public/Images/tgfit_logo.svg
+  }
+
+  tglogo = IMG_RESOURCE
+  tglogo {
+    file = EXT:tgfit/Resources/Public/Images/TGLogo.svg
+  }
+
+  stage = TEXT
+  stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
+  navigation
+  content
+}
