@@ -9,7 +9,7 @@ tgfit {
  */
 plugin.tx_scriptmerger {
   css {
-    enable = 1
+    enable = 0
     minify.enable = 1
     #minify.ignore = .min.
     
@@ -21,7 +21,7 @@ plugin.tx_scriptmerger {
   }
   javascript {
     enable = 1
-    parseBody = 1
+    parseBody = 0
     
     minify.enable = 1
     #minify.ignore = ?,.min.

@@ -19,10 +19,6 @@ page {
           10 = EXT:tgfit/Resources/Private/Partials
       }
   }
-
-  includeCSS {
-    styles = EXT:tgfit/Resources/Public/Styles.scss
-  }
 }
 
 
