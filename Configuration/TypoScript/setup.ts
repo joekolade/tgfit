@@ -66,6 +66,41 @@ page.10.variables {
 
   stage = TEXT
   stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
-  navigation
+  
+  /**
+   * Menu-Prototype
+   */
+  navigation = HMENU
+  navigation {
+    # entryLevel = 1
+    # special = directory
+    # special.value = pid
+
+    1 = TMENU
+    1 {
+      wrap = <ul class="list-inline">|</ul>
+      expAll = 1
+      noBlur = 1
+      NO = 1
+      NO {
+          ATagTitle {
+            field = title
+            fieldRequired = nav_title
+          }
+          wrapItemAndSub = <li class="first">|</li> |*| <li>|</li> |*| <li class="last">|</li>     
+          # HTML-encode special characters according to the PHP-function htmlSpecialChars
+          stdWrap.htmlSpecialChars = 1
+      }
+      ACT < .NO
+      ACT {
+        wrapItemAndSub = <li class="active first">|</li> |*| <li class="active">|</li> |*| <li class="active last">|</li>
+      }
+      CUR < .ACT
+    }
+
+    2 < .1
+    2.wrap = <ul class="subnav">|</ul>
+  }
+  
   content
 }
