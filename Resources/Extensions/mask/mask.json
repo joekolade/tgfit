@@ -11,11 +11,13 @@
                 "description": "dummy description",
                 "columns": [
                     "tx_mask_tglogo",
-                    "tx_mask_tginfo"
+                    "tx_mask_tginfo",
+                    "tx_mask_tghome"
                 ],
                 "labels": [
                     "TG Logo",
-                    "TG Kontaktdaten"
+                    "TG Kontaktdaten",
+                    "TG Homepage"
                 ],
                 "options": {
                     "1": "rte"
@@ -31,6 +33,11 @@
             "tx_mask_tginfo": {
                 "pages": {
                     "tx_mask_tginfo": "text"
+                }
+            },
+            "tx_mask_tghome": {
+                "pages": {
+                    "tx_mask_tghome": "tinytext"
                 }
             }
         },
@@ -70,6 +77,36 @@
                 "exclude": "1",
                 "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
                 "key": "tginfo"
+            },
+            "tx_mask_tghome": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "file,mail,page,folder",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "key": "tghome"
             }
         }
     },

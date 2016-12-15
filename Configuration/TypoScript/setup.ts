@@ -118,9 +118,51 @@ page.10.variables {
   /**
    * Footercontent (Start)
    * 
-   * colPos 31
    */
-  footer 
+  footer = COA
+  footer {
 
+    wrap = <footer class="container"><div class="row">|</div></footer>
+
+    10 = FILES
+    10 {
+      references {
+        table = pages
+        fieldName = tx_mask_tglogo
+        uid.data = uid
+      }
+      renderObj = IMAGE
+      renderObj {
+        wrap = <div class="col-sm-4">|</div>
+
+        file.import.data = file:current:originalUid // file:current:uid
+        altText.field = Turngemeinde Biberach 1847 e.V.
+        titleText.field = Webseite der Turngemeinde Biberach 1847 e.V.
+        params = class="img-responsive"
+
+        stdWrap.typolink.parameter.field = tx_mask_tghome
+        stdWrap.typolink.extTarget = _blank
+      }
+    }
+
+    20 = CONTENT
+    20 {
+      table = pages
+      select {
+        pidInList = 0
+        uidInList = 1
+      }
+
+      renderObj = COA
+      renderObj {
+        wrap = <div class="col-sm-4">|</div>
+        10 = TEXT
+        10 {
+          field = tx_mask_tginfo
+          parseFunc = < lib.parseFunc_RTE
+        }
+      }
+    }
+  }
 
 }
