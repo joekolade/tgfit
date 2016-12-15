@@ -1,0 +1,85 @@
+{
+    "tt_content": {
+        "elements": null
+    },
+    "pages": {
+        "elements": {
+            "2": {
+                "label": "Startseite",
+                "key": "2",
+                "shortLabel": "dummy shortitle",
+                "description": "dummy description",
+                "columns": [
+                    "tx_mask_tglogo",
+                    "tx_mask_tginfo"
+                ],
+                "labels": [
+                    "TG Logo",
+                    "TG Kontaktdaten"
+                ],
+                "options": {
+                    "1": "rte"
+                }
+            }
+        },
+        "sql": {
+            "tx_mask_tglogo": {
+                "pages": {
+                    "tx_mask_tglogo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_tginfo": {
+                "pages": {
+                    "tx_mask_tginfo": "text"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_tglogo": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select"
+                    },
+                    "minitems": "",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": "svg,jpg,png"
+                            }
+                        }
+                    ]
+                },
+                "key": "tglogo"
+            },
+            "tx_mask_tginfo": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
+                "key": "tginfo"
+            }
+        }
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_tglogo": {
+                "sys_file_reference": {
+                    "tx_mask_tglogo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    }
+}

@@ -64,11 +64,17 @@ page.10.variables {
     file = EXT:tgfit/Resources/Public/Images/TGLogo.svg
   }
 
+  /**
+   * stage
+   *
+   * colPos 11
+   */
   stage = TEXT
   stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
   
   /**
    * Menu-Prototype
+   *
    */
   navigation = HMENU
   navigation {
@@ -102,5 +108,19 @@ page.10.variables {
     2.wrap = <ul class="subnav">|</ul>
   }
   
-  content
+  /**
+   * Pagecontent
+   * 
+   * colPos 21
+   */
+  content >
+  
+  /**
+   * Footercontent (Start)
+   * 
+   * colPos 31
+   */
+  footer 
+
+
 }
