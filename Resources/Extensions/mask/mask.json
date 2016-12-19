@@ -1,6 +1,83 @@
 {
     "tt_content": {
-        "elements": null
+        "elements": {
+            "teaserbox": {
+                "label": "Bereich Teaser-Box",
+                "key": "teaserbox",
+                "shortLabel": "",
+                "description": "",
+                "icon": "fa-star",
+                "color": "#00b4d9",
+                "columns": [
+                    "image",
+                    "header",
+                    "bodytext",
+                    "header_link",
+                    "tx_mask_tgfit_area"
+                ],
+                "labels": [
+                    "",
+                    "Bild-Unterschrift",
+                    "",
+                    "",
+                    "Bereich"
+                ],
+                "options": {
+                    "2": "rte"
+                }
+            }
+        },
+        "sql": {
+            "tx_mask_tgfit_area": {
+                "tt_content": {
+                    "tx_mask_tgfit_area": "tinytext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_tgfit_area": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "kein Bereich",
+                            "0"
+                        ],
+                        [
+                            "TG-Blau",
+                            "tgblau"
+                        ],
+                        [
+                            "Gesund & Fit",
+                            "gesundfit"
+                        ],
+                        [
+                            "Fit for Life",
+                            "f4l"
+                        ],
+                        [
+                            "Reha-Fit",
+                            "rehafit"
+                        ],
+                        [
+                            "BGM",
+                            "bgm"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "tgfit_area"
+            }
+        }
     },
     "pages": {
         "elements": {
