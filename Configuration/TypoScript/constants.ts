@@ -4,6 +4,11 @@ tgfit {
 }
 
 
+pageIds {
+  root = 1
+  infoRoot = 4
+}
+
 /**
  * EXT:scriptmerger
  */

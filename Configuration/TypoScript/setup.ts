@@ -133,7 +133,6 @@ page.10.variables {
       }
       renderObj = IMAGE
       renderObj {
-        wrap = <div class="col-sm-4">|</div>
 
         file.import.data = file:current:originalUid // file:current:uid
         altText.field = Turngemeinde Biberach 1847 e.V.
@@ -142,6 +141,7 @@ page.10.variables {
 
         stdWrap.typolink.parameter.field = tx_mask_tghome
         stdWrap.typolink.extTarget = _blank
+        stdWrap.outerWrap = <div class="col-sm-4">|</div>
       }
     }
 
@@ -160,6 +160,27 @@ page.10.variables {
         10 {
           field = tx_mask_tginfo
           parseFunc = < lib.parseFunc_RTE
+        }
+      }
+    }
+
+    30 = COA
+    30 {
+      wrap = <div class="col-sm-4">|</div>
+      10 = TEXT
+      10.value = <b>Info-Themen</b>
+      
+      20 = HMENU
+      20 {
+        special = directory
+        special.value = {$pageIds.infoRoot}
+        1 = TMENU
+        1 {
+          wrap = <ul class="list-unstyled">|</ul>
+          NO  = 1
+          NO  {
+            wrapItemAndSub = <li>|</li>
+          }
         }
       }
     }
