@@ -1,4 +1,16 @@
 /**
+ * INCLUDE EXTENSION TYPOSCRIPT
+ */
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:scriptmerger/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/setup.ts">
+
+
+
+/**
  * Base and setup
  *
  */
@@ -71,6 +83,8 @@ page.10.variables {
    */
   stage = TEXT
   stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
+  stage < styles.content.get
+  stage.select.where = colPos = 11
   
   /**
    * Menu-Prototype
@@ -113,7 +127,8 @@ page.10.variables {
    * 
    * colPos 21
    */
-  content >
+  content < styles.content.get
+  content.select.where = colPos = 21
   
   /**
    * Footercontent (Start)

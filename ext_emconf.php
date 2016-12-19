@@ -26,6 +26,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'depends' => array(
 			'typo3' => '7.6.0-8.99.99',
 			'gridelements' => '',
+			'bootstrap_grids' => '',
 			'mask' => '',
 			'realurl' => '',
 			'dd_googlesitemap' => '',
