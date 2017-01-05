@@ -146,7 +146,7 @@ page.10.variables {
       references {
         table = pages
         fieldName = tx_mask_tglogo
-        uid.data = uid
+        uid = {$pageIds.root}
       }
       renderObj = IMAGE
       renderObj {
@@ -167,7 +167,7 @@ page.10.variables {
       table = pages
       select {
         pidInList = 0
-        uidInList = 1
+        uidInList = {$pageIds.root}
       }
 
       renderObj = COA
