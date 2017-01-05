@@ -95,10 +95,7 @@
                     "TG Logo",
                     "TG Kontaktdaten",
                     "TG Homepage"
-                ],
-                "options": {
-                    "1": "rte"
-                }
+                ]
             }
         },
         "sql": {
@@ -149,10 +146,11 @@
                     "rows": "",
                     "default": "",
                     "placeholder": "",
-                    "max": ""
+                    "max": "",
+                    "format": "html",
+                    "wrap": "off"
                 },
                 "exclude": "1",
-                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
                 "key": "tginfo"
             },
             "tx_mask_tghome": {

@@ -37,8 +37,10 @@ $EM_CONF[$_EXTKEY] = array(
 			// Sysextensions
 			'opendocs' => '',
 			'recycler' => '',
+			'rte_ckeditor' => '',
 		),
 		'conflicts' => array(
+			'rtehtmlarea' => ''
 		),
 		'suggests' => array(
 			'rx_unrollsavebuttons' => '',

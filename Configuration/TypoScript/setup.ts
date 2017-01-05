@@ -176,7 +176,7 @@ page.10.variables {
         10 = TEXT
         10 {
           field = tx_mask_tginfo
-          parseFunc = < lib.parseFunc_RTE
+          #parseFunc = < lib.parseFunc_RTE
         }
       }
     }
