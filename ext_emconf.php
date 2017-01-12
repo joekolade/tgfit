@@ -45,6 +45,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 			'rx_unrollsavebuttons' => '',
 			'go_maps_ext' => '',
+			'frontend_editing' => '',
 		),
 	),
 );

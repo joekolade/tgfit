@@ -1,6 +1,56 @@
 {
     "tt_content": {
         "elements": {
+            "kursblock": {
+                "label": "Kursblock",
+                "key": "kursblock",
+                "shortLabel": "",
+                "description": "Block f\u00fcr einen Kurs",
+                "icon": "fa-list-alt",
+                "color": "#c5e6fc",
+                "columns": [
+                    "header",
+                    "bodytext",
+                    "tx_mask_kursblock_ort",
+                    "tx_mask_kursblock_ort_label",
+                    "tx_mask_kursblock_leiter",
+                    "tx_mask_kursblock_leiter_label"
+                ],
+                "labels": [
+                    "",
+                    "Kurzbeschreibung",
+                    "Ort (Link)",
+                    "Ort",
+                    "\u00dcbungsleiter (Link)",
+                    "\u00dcbungsleiter(in)"
+                ],
+                "options": {
+                    "1": "rte"
+                }
+            },
+            "kursuebersicht": {
+                "label": "Kurs\u00fcbersicht",
+                "key": "kursuebersicht",
+                "shortLabel": "",
+                "description": "\u00dcbersichtsbox mit 3 Spalten f\u00fcr Kursbeschreibungen. Die Spalten werden automatisch generiert.",
+                "icon": "fa-th",
+                "color": "#c5e6fc",
+                "columns": [
+                    "header",
+                    "tx_mask_kursbox_area",
+                    "bodytext",
+                    "tx_mask_kursbox_cmitte"
+                ],
+                "labels": [
+                    "",
+                    "Bereich",
+                    "Beschreibung",
+                    "Kurse"
+                ],
+                "options": {
+                    "2": "rte"
+                }
+            },
             "teaserbox": {
                 "label": "Bereich Teaser-Box",
                 "key": "teaserbox",
@@ -31,6 +81,36 @@
             "tx_mask_tgfit_area": {
                 "tt_content": {
                     "tx_mask_tgfit_area": "tinytext"
+                }
+            },
+            "tx_mask_kursbox_area": {
+                "tt_content": {
+                    "tx_mask_kursbox_area": "tinytext"
+                }
+            },
+            "tx_mask_kursbox_cmitte": {
+                "tt_content": {
+                    "tx_mask_kursbox_cmitte": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_kursblock_ort": {
+                "tt_content": {
+                    "tx_mask_kursblock_ort": "tinytext"
+                }
+            },
+            "tx_mask_kursblock_ort_label": {
+                "tt_content": {
+                    "tx_mask_kursblock_ort_label": "tinytext"
+                }
+            },
+            "tx_mask_kursblock_leiter": {
+                "tt_content": {
+                    "tx_mask_kursblock_leiter": "tinytext"
+                }
+            },
+            "tx_mask_kursblock_leiter_label": {
+                "tt_content": {
+                    "tx_mask_kursblock_leiter_label": "tinytext"
                 }
             }
         },
@@ -76,6 +156,162 @@
                 },
                 "exclude": "1",
                 "key": "tgfit_area"
+            },
+            "tx_mask_kursbox_area": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "kein",
+                            "0"
+                        ],
+                        [
+                            "TG-blau",
+                            "tgblau"
+                        ],
+                        [
+                            "Gesund und Fit",
+                            "gesundfit"
+                        ],
+                        [
+                            "Reha-Fit",
+                            "rehafit"
+                        ],
+                        [
+                            "BGM",
+                            "bgm"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "kursbox_area"
+            },
+            "tx_mask_kursbox_cmitte": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "tt_content",
+                    "foreign_record_defaults": {
+                        "colPos": "999"
+                    },
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "collapseAll": "1",
+                        "levelLinksPosition": "top",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "useSortable": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": ""
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "cTypes": [
+                    "mask_kursblock"
+                ],
+                "key": "kursbox_cmitte"
+            },
+            "tx_mask_kursblock_ort": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "file,mail,folder,url",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "key": "kursblock_ort"
+            },
+            "tx_mask_kursblock_ort_label": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "Ort",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "kursblock_ort_label"
+            },
+            "tx_mask_kursblock_leiter": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "file,mail,folder,url",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "key": "kursblock_leiter"
+            },
+            "tx_mask_kursblock_leiter_label": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "\u00dcbungsleiter(in)",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "kursblock_leiter_label"
             }
         }
     },

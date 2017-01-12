@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12{f:if(condition: '{data.tx_mask_kursbox_area}', then: ' bg-{data.tx_mask_kursbox_area}')}">
+        <f:if condition="{data.header}">
+            <h2>{data.header}</h2>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+        </f:if>
+    </div>
+    <f:if condition="{data.tx_mask_kursbox_cmitte}">
+        <div class="col-xs-12 events">
+            <f:for each="{data.tx_mask_kursbox_cmitte}" as="data_item">
+                <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
+            </f:for>
+        </div>
+    </f:if>
+</div>

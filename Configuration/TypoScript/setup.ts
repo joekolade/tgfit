@@ -17,6 +17,7 @@
  *
  */
 config.baseURL = http://{$tgfit.domain}/
+#config.tx_frontend_editing = 1
 
 page = PAGE
 page {
