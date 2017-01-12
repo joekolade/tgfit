@@ -1,27 +1,24 @@
+<div id="page">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-<body>
-    <div id="page">
-        <!--[if lt IE 10]>
-          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <f:render partial="Header" arguments="{_all}" />
+    <f:render partial="Header" arguments="{_all}" />
 
 
-        <section class="container stage">
+    <section class="container stage">
 
-            {stage -> f:format.raw()}
+        {stage -> f:format.raw()}
 
-        </section>
+    </section>
 
 
-        <section class="container content">
+    <section class="container content">
 
-          <f:render section="content" />
+      <f:render section="content" />
 
-        </section>
+    </section>
 
-        <f:render partial="Footer" arguments="{_all}" />
+    <f:render partial="Footer" arguments="{_all}" />
 
-    </div>
-</body>
+</div>

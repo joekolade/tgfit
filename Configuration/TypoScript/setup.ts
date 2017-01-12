@@ -1,14 +1,3 @@
-/**
- * INCLUDE EXTENSION TYPOSCRIPT
- */
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:scriptmerger/Configuration/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/setup.txt">
-
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/gridelements_setup.ts">
 
 
 
@@ -18,6 +7,8 @@
  */
 config.baseURL = http://{$tgfit.domain}/
 #config.tx_frontend_editing = 1
+
+# Realurl aktivieren
 config.tx_realurl_enable = 1
 
 page = PAGE
@@ -49,17 +40,32 @@ page {
   }
 
  includeJS {
-   modernizr = EXT:tgfit/Resources/Public/JavaScript/vendor/modernizr.js
+    modernizr = EXT:tgfit/Resources/Public/JavaScript/vendor/modernizr.js
  }
 
  includeJSFooterlibs {
-    vendor = EXT:tgfit/Resources/Public/JavaScript/vendor.js
+    vendors = EXT:tgfit/Resources/Public/JavaScript/vendor.js
     plugins = EXT:tgfit/Resources/Public/JavaScript/plugins.js
  }
  includeJSFooter {
    main = EXT:tgfit/Resources/Public/JavaScript/main.js
  }
 }
+
+
+/**
+ * INCLUDE EXTENSION TYPOSCRIPT
+ */
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:scriptmerger/Configuration/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/setup.txt">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/gridelements_setup.ts">
+
+
 
 /**
  * Template Variables
