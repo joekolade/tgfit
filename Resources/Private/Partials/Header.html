@@ -1,16 +1,15 @@
+<header class="container">
+    <div class="row">
+        <div class="col-xs-9 col-sm-4">
+            <f:link.page pageUid="{rootPage}" class="logo">
+                <f:image src="{logo}" height="62" class="img-responsive"></f:image>
+            </f:link.page>
+        </div>
+        <div class="col-sm-8 hidden-xs">
 
-        <header class="container">
-            <div class="row">
-                <div class="col-xs-9 col-sm-4">
-                    <f:link.page pageUid="{rootPage}" class="logo">
-                        <f:image src="{logo}" height="62" class="img-responsive"></f:image>
-                    </f:link.page>
-                </div>
-                <div class="col-sm-8 hidden-xs">
-                    
-                    <f:render partial="Navigation" arguments="{_all}" />
-                    
-                </div>
-                <div class="col-xs-3 visible-xs"><a href="#navmenu" class="menuToggle"><i class="fa fa-bars"></i></a></div>
-            </div>
-        </header>
+            <f:render partial="Navigation.html" arguments="{_all}" />
+
+        </div>
+        <div class="col-xs-3 visible-xs"><a href="#navmenu" class="menuToggle"><i class="fa fa-bars"></i></a></div>
+    </div>
+</header>

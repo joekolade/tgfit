@@ -1,3 +1,14 @@
+/**
+ * INCLUDE EXTENSION TYPOSCRIPT
+ */
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:scriptmerger/Configuration/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/setup.txt">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/gridelements_setup.ts">
 
 
 
@@ -16,14 +27,15 @@ page {
   10 = FLUIDTEMPLATE
   10 {
       templateName = Default
+
       templateRootPaths {
           10 = EXT:tgfit/Resources/Private/Templates
       }
-      layoutRootPaths {
-          10 = EXT:tgfit/Resources/Private/Layouts
-      }
       partialRootPaths {
           10 = EXT:tgfit/Resources/Private/Partials
+      }
+      layoutRootPaths {
+          10 = EXT:tgfit/Resources/Private/Layouts
       }
   }
 }
@@ -39,32 +51,18 @@ page {
     style = EXT:tgfit/Resources/Public/Css/main.css
   }
 
- includeJS {
+  includeJS {
     modernizr = EXT:tgfit/Resources/Public/JavaScript/vendor/modernizr.js
- }
+  }
 
- includeJSFooterlibs {
+  includeJSFooterlibs {
     vendors = EXT:tgfit/Resources/Public/JavaScript/vendor.js
     plugins = EXT:tgfit/Resources/Public/JavaScript/plugins.js
- }
- includeJSFooter {
-   main = EXT:tgfit/Resources/Public/JavaScript/main.js
- }
+  }
+  includeJSFooter {
+    main = EXT:tgfit/Resources/Public/JavaScript/main.js
+  }
 }
-
-
-/**
- * INCLUDE EXTENSION TYPOSCRIPT
- */
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:scriptmerger/Configuration/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/setup.txt">
-
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/gridelements_setup.ts">
-
 
 
 /**
@@ -213,5 +211,4 @@ page.10.variables {
       }
     }
   }
-
 }
