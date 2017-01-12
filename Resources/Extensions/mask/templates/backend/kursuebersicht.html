@@ -20,7 +20,7 @@
             <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapse_mask_{data.uid}" aria-expanded="false" aria-controls="collapseExample">Kurse anzeigen/verbergen</a>
             <div class="collapse" id="collapse_mask_{data.uid}">
                 <f:for each="{data.tx_mask_kursbox_cmitte}" as="data_item">
-                    <f:render partial="kursblock" arguments="{data_item: data_item}"></f:render>
+                    <f:render partial="Kursblock" arguments="{data_item: data_item}"></f:render>
                 </f:for>
             </div>
         </div>
