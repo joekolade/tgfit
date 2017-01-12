@@ -18,6 +18,7 @@
  */
 config.baseURL = http://{$tgfit.domain}/
 #config.tx_frontend_editing = 1
+config.tx_realurl_enable = 1
 
 page = PAGE
 page {
@@ -39,7 +40,7 @@ page {
 
 /**
  * Styles and scripts
- * 
+ *
  */
 page {
   includeCSS {
@@ -62,12 +63,15 @@ page {
 
 /**
  * Template Variables
- * 
+ *
  */
 page.10.variables {
-  
+
   sitename = TEXT
   sitename.value = TG Fit
+
+  rootPage = TEXT
+  rootPage.value = {$pageIds.root}
 
   logo = IMG_RESOURCE
   logo {
@@ -88,7 +92,7 @@ page.10.variables {
   stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
   stage < styles.content.get
   stage.select.where = colPos = 11
-  
+
   /**
    * Menu-Prototype
    *
@@ -110,7 +114,7 @@ page.10.variables {
             field = title
             fieldRequired = nav_title
           }
-          wrapItemAndSub = <li class="first">|</li> |*| <li>|</li> |*| <li class="last">|</li>     
+          wrapItemAndSub = <li class="first">|</li> |*| <li>|</li> |*| <li class="last">|</li>
           # HTML-encode special characters according to the PHP-function htmlSpecialChars
           stdWrap.htmlSpecialChars = 1
       }
@@ -124,18 +128,18 @@ page.10.variables {
     2 < .1
     2.wrap = <ul class="subnav">|</ul>
   }
-  
+
   /**
    * Pagecontent
-   * 
+   *
    * colPos 21
    */
   content < styles.content.get
   content.select.where = colPos = 21
-  
+
   /**
    * Footercontent (Start)
-   * 
+   *
    */
   footer = COA
   footer {
@@ -187,7 +191,7 @@ page.10.variables {
       wrap = <div class="col-sm-4">|</div>
       10 = TEXT
       10.value = <b>Info-Themen</b>
-      
+
       20 = HMENU
       20 {
         special = directory
