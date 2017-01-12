@@ -17,7 +17,7 @@ tx_gridelements {
       icon = EXT:bootstrap_grids/Resources/Public/Icons/gridlayout_col3.gif
       frame = 3
       topLevelLayout = 0
-      
+
       config {
           colCount = 3
           rowCount = 1
@@ -39,46 +39,3 @@ tx_gridelements {
           }
       }
   }
-
-  setup.kursuebersicht < tx_gridelements.setup.3cols
-  setup.kursuebersicht {
-    title = Kursübersicht-Box
-    description = Übersichtsbox mit 3 Spalten für Kursbeschreibungen
-    icon = EXT:bootstrap_grids/Resources/Public/Icons/gridlayout_col3.gif
-    frame = 3
-    topLevelLayout = 0
-    config >
-    config {
-      colCount = 3
-      rowCount = 2
-      rows {
-       1 {
-         columns {
-           1 {
-             name = Teaser
-             colPos = 11
-             colSpan = 3
-           }
-         }
-       }
-       2 {
-         columns {
-           1 {
-             name = Spalte links
-             colPos = 21
-           }
-           2 {
-             name = Spalte mitte
-             colPos = 22
-           }
-           3 {
-             name = Spalte rechts
-             colPos = 23
-           }
-         }
-       }
-      }
-    }
-  }
-  flexformDS = FILE:EXT:tgfit/Configuration/Flexforms/kursuebersicht.xml
-}
