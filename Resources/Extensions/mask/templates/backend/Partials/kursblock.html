@@ -1,0 +1,20 @@
+<f:alias map="{data: data_item}">
+
+<div class="events__item">
+    <f:if condition="{data.header}">
+        <hr style="background-color: #cdcdcd;">
+        <h4>{data.header}</h4>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+        <f:format.raw>{data.bodytext}</f:format.raw> <b>//</b>
+    </f:if>
+        <f:if condition="{data.tx_mask_kursblock_ort_label}">
+        <span class="place">Ort: <f:link.page pageUid="{data.tx_mask_kursblock_ort}">{data.tx_mask_kursblock_ort_label}</f:link.page></span> <b>//</b>
+        </f:if>
+
+        <f:if condition="{data.tx_mask_kursblock_leiter_label}">
+            <span class="master">Übungsleiter(in): <f:link.page pageUid="{data.tx_mask_kursblock_leiter}">{data.tx_mask_kursblock_leiter_label}</f:link.page></span>
+        </f:if>
+</div>
+
+</f:alias>

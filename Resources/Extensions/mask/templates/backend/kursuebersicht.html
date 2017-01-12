@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12{f:if(condition: '{data.tx_mask_kursbox_area}', then: ' bg-{data.tx_mask_kursbox_area}')}">
+        <f:if condition="{data.header}">
+            <h2>{data.header}</h2>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <f:format.raw>{data.bodytext}</f:format.raw>
+        </f:if>
+        <div>
+            <b>Bereich: </b>
+            <f:if condition="{data.tx_mask_kursbox_area}">
+                <f:then>{data.tx_mask_kursbox_area}</f:then>
+                <f:else>-- keiner --</f:else>
+            </f:if>
+        </div>
+    </div>
+    <f:if condition="{data.tx_mask_kursbox_cmitte}">
+        <div class="col-xs-12 events">
+            <br>
+            <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapse_mask_{data.uid}" aria-expanded="false" aria-controls="collapseExample">Kurse anzeigen/verbergen</a>
+            <div class="collapse" id="collapse_mask_{data.uid}">
+                <f:for each="{data.tx_mask_kursbox_cmitte}" as="data_item">
+                    <f:render partial="kursblock" arguments="{data_item: data_item}"></f:render>
+                </f:for>
+            </div>
+        </div>
+    </f:if>
+</div>
