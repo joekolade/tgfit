@@ -90,6 +90,12 @@ page.10.variables {
   pagelayout.data = levelfield:-2,backend_layout_next_level,slide
   pagelayout.override.field = backend_layout
 
+  pageareacolor = TEXT
+  pageareacolor {
+    data = levelfield:-2,tx_mask_page_area,slide
+    override.field = tx_mask_page_area
+    #override.if.isTrue.field = tx_mask_page_area
+  }
 
   /**
    * stage

@@ -1,4 +1,4 @@
-<div id="page" {f:if(condition: '{data.tx_mask_page_area}', then: ' class="{data.tx_mask_page_area}"')}>
+<div id="page" {f:if(condition: '{pageareacolor}', then: ' class="{pageareacolor}"')}>
     <f:render partial="Header.html" arguments="{_all}"></f:render>
     <section class="container stage">
         <f:if condition="{pagelayout} == 2">
