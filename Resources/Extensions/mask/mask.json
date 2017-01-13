@@ -83,16 +83,6 @@
                     "tx_mask_tgfit_area": "tinytext"
                 }
             },
-            "tx_mask_kursbox_area": {
-                "tt_content": {
-                    "tx_mask_kursbox_area": "tinytext"
-                }
-            },
-            "tx_mask_kursbox_cmitte": {
-                "tt_content": {
-                    "tx_mask_kursbox_cmitte": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_kursblock_ort": {
                 "tt_content": {
                     "tx_mask_kursblock_ort": "tinytext"
@@ -111,6 +101,16 @@
             "tx_mask_kursblock_leiter_label": {
                 "tt_content": {
                     "tx_mask_kursblock_leiter_label": "tinytext"
+                }
+            },
+            "tx_mask_kursbox_area": {
+                "tt_content": {
+                    "tx_mask_kursbox_area": "tinytext"
+                }
+            },
+            "tx_mask_kursbox_cmitte": {
+                "tt_content": {
+                    "tx_mask_kursbox_cmitte": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
@@ -156,76 +156,6 @@
                 },
                 "exclude": "1",
                 "key": "tgfit_area"
-            },
-            "tx_mask_kursbox_area": {
-                "config": {
-                    "type": "select",
-                    "renderType": "selectSingle",
-                    "size": "",
-                    "items": [
-                        [
-                            "kein",
-                            "0"
-                        ],
-                        [
-                            "TG-blau",
-                            "tgblau"
-                        ],
-                        [
-                            "Gesund und Fit",
-                            "gesundfit"
-                        ],
-                        [
-                            "Reha-Fit",
-                            "rehafit"
-                        ],
-                        [
-                            "BGM",
-                            "bgm"
-                        ]
-                    ],
-                    "foreign_table": "",
-                    "foreign_table_where": "",
-                    "fileFolder": "",
-                    "fileFolder_extList": "",
-                    "fileFolder_recursions": "",
-                    "maxitems": "",
-                    "autoSizeMax": ""
-                },
-                "exclude": "1",
-                "key": "kursbox_area"
-            },
-            "tx_mask_kursbox_cmitte": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "tt_content",
-                    "foreign_record_defaults": {
-                        "colPos": "999"
-                    },
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "collapseAll": "1",
-                        "levelLinksPosition": "top",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "useSortable": "1",
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "newRecordLinkTitle": ""
-                    },
-                    "minitems": "",
-                    "maxitems": "",
-                    "behaviour": {
-                        "localizationMode": "select"
-                    }
-                },
-                "exclude": "1",
-                "cTypes": [
-                    "mask_kursblock"
-                ],
-                "key": "kursbox_cmitte"
             },
             "tx_mask_kursblock_ort": {
                 "config": {
@@ -312,6 +242,80 @@
                 },
                 "exclude": "1",
                 "key": "kursblock_leiter_label"
+            },
+            "tx_mask_kursbox_area": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "kein",
+                            "0"
+                        ],
+                        [
+                            "TG-blau",
+                            "tgblau"
+                        ],
+                        [
+                            "Gesund und Fit",
+                            "gesundfit"
+                        ],
+                        [
+                            "Fit 4 Life",
+                            "f4l"
+                        ],
+                        [
+                            "Reha-Fit",
+                            "rehafit"
+                        ],
+                        [
+                            "BGM",
+                            "bgm"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "kursbox_area"
+            },
+            "tx_mask_kursbox_cmitte": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "tt_content",
+                    "foreign_record_defaults": {
+                        "colPos": "999"
+                    },
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "collapseAll": "1",
+                        "levelLinksPosition": "top",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "useSortable": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": ""
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "cTypes": [
+                    "mask_kursblock"
+                ],
+                "key": "kursbox_cmitte"
             }
         }
     },
@@ -332,6 +336,20 @@
                     "TG Kontaktdaten",
                     "TG Homepage"
                 ]
+            },
+            "1": {
+                "label": "Standardseite",
+                "key": "1",
+                "shortLabel": "dummy shortitle",
+                "description": "dummy description",
+                "columns": [
+                    "tx_mask_page_area",
+                    "tx_mask_page_hide_title"
+                ],
+                "labels": [
+                    "Bereichs-Farbe",
+                    "Seitentitel \u00fcber Inhalt"
+                ]
             }
         },
         "sql": {
@@ -348,6 +366,16 @@
             "tx_mask_tghome": {
                 "pages": {
                     "tx_mask_tghome": "tinytext"
+                }
+            },
+            "tx_mask_page_area": {
+                "pages": {
+                    "tx_mask_page_area": "tinytext"
+                }
+            },
+            "tx_mask_page_hide_title": {
+                "pages": {
+                    "tx_mask_page_hide_title": "int(11) DEFAULT '0' NOT NULL"
                 }
             }
         },
@@ -418,6 +446,63 @@
                 },
                 "exclude": "1",
                 "key": "tghome"
+            },
+            "tx_mask_page_area": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "keine",
+                            "0"
+                        ],
+                        [
+                            "TG-blau",
+                            "tgblau"
+                        ],
+                        [
+                            "Gesund und Fit",
+                            "gesundfit"
+                        ],
+                        [
+                            "Fit 4 Life",
+                            "f4l"
+                        ],
+                        [
+                            "Reha-Fit",
+                            "rehafit"
+                        ],
+                        [
+                            "BGM",
+                            "bgm"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "page_area"
+            },
+            "tx_mask_page_hide_title": {
+                "config": {
+                    "type": "check",
+                    "items": [
+                        [
+                            "verbergen (nur wenn Stage\/B\u00fchne leer)",
+                            "1"
+                        ]
+                    ],
+                    "cols": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "key": "page_hide_title"
             }
         }
     },

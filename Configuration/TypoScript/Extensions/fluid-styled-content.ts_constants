@@ -1,0 +1,7 @@
+/**
+ * Fluid Styled Content
+ *
+ */
+styles.templates.layoutRootPath = EXT:tgfit/Resources/Extensions/fsc/Layouts
+styles.templates.templateRootPath = EXT:tgfit/Resources/Extensions/fsc/Templates
+styles.templates.partialRootPath = EXT:tgfit/Resources/Extensions/fsc/Partials

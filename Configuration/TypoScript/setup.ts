@@ -64,7 +64,6 @@ page {
   }
 }
 
-
 /**
  * Template Variables
  *
@@ -86,6 +85,11 @@ page.10.variables {
   tglogo {
     file = EXT:tgfit/Resources/Public/Images/TGLogo.svg
   }
+
+  pagelayout = TEXT
+  pagelayout.data = levelfield:-2,backend_layout_next_level,slide
+  pagelayout.override.field = backend_layout
+
 
   /**
    * stage

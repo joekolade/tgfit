@@ -1,6 +1,7 @@
 /**
  * INCLUDE EXTENSION TYPOSCRIPT
  */
+
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.ts">
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/constants.ts">
@@ -8,7 +9,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:scriptmerger/Configuration/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/constants.txt">
 
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/fluid-styled-content.ts_constants">
 
 tgfit {
   # domain = tgfit.de/typo3_dev
