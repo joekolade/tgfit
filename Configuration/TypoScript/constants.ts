@@ -1,6 +1,6 @@
-/**
- * INCLUDE EXTENSION TYPOSCRIPT
- */
+#
+# INCLUDE EXTENSION TYPOSCRIPT
+#
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.ts">
@@ -29,9 +29,10 @@ styles.content.textmedia.maxWInText = 870
 styles.content.textmedia.linkWrap.width = 1200m
 styles.content.textmedia.linkWrap.height = 720m
 
-/**
- * EXT:scriptmerger
- */
+#
+# EXT:scriptmerger
+#
+
 plugin.tx_scriptmerger {
   css {
     enable = 0
@@ -59,9 +60,10 @@ plugin.tx_scriptmerger {
   }
 }
 
-/**
- * EXT:cs_seo
- */
+#
+# EXT:cs_seo
+#
+
 plugin.tx_csseo.social.defaultImage = typo3conf/ext/tgfit/Resources/Public/Images/TG_RGB.jpg
 plugin.tx_csseo.social.openGraph.image.width = 1187
 plugin.tx_csseo.social.openGraph.image.height = 658c
