@@ -62,7 +62,7 @@ plugin.tx_scriptmerger {
 /**
  * EXT:cs_seo
  */
-plugin.tx_csseo.social.defaultImage = EXT:tgfit/Resources/Public/Images/TG_RGB.jpg
+plugin.tx_csseo.social.defaultImage = typo3conf/ext/tgfit/Resources/Public/Images/TG_RGB.jpg
 plugin.tx_csseo.social.openGraph.image.width = 1187
 plugin.tx_csseo.social.openGraph.image.height = 658c
 plugin.tx_csseo.hreflang.enable = 0
