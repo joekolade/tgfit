@@ -37,18 +37,20 @@
                 "color": "#c5e6fc",
                 "columns": [
                     "header",
+                    "tx_mask_header_link",
                     "tx_mask_kursbox_area",
                     "bodytext",
                     "tx_mask_kursbox_cmitte"
                 ],
                 "labels": [
                     "",
+                    "Link auf \u00dcberschrift",
                     "Bereich",
                     "Beschreibung",
                     "Kurse"
                 ],
                 "options": {
-                    "2": "rte"
+                    "3": "rte"
                 }
             },
             "teaserbox": {
@@ -101,6 +103,11 @@
             "tx_mask_kursblock_leiter_label": {
                 "tt_content": {
                     "tx_mask_kursblock_leiter_label": "tinytext"
+                }
+            },
+            "tx_mask_header_link": {
+                "tt_content": {
+                    "tx_mask_header_link": "tinytext"
                 }
             },
             "tx_mask_kursbox_area": {
@@ -242,6 +249,36 @@
                 },
                 "exclude": "1",
                 "key": "kursblock_leiter_label"
+            },
+            "tx_mask_header_link": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "file,page,url",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "key": "header_link"
             },
             "tx_mask_kursbox_area": {
                 "config": {
