@@ -1,7 +1,12 @@
 <div class="row">
     <div class="col-xs-12{f:if(condition: '{data.tx_mask_kursbox_area}', then: ' bg-{data.tx_mask_kursbox_area}')}">
         <f:if condition="{data.header}">
-            <h2>{data.header}</h2>
+            <h2>
+            {data.header}
+            <f:if condition="{data.tx_mask_header_link}">
+            <small>Link: {data.tx_mask_header_link}</small>
+            </f:if>
+            </h2>
         </f:if>
         <f:if condition="{data.bodytext}">
             <f:format.raw>{data.bodytext}</f:format.raw>
