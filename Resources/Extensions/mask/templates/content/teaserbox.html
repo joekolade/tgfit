@@ -1,7 +1,9 @@
 <div class="teaser teaser_{data.tx_mask_tgfit_area}">
   <figure>
     <f:if condition="{data.image.0}">
-      <f:image image="{data.image.0}" alt="{data.header}" title="{data.header}" class="img-responsive" width="708" />
+      <f:link.page pageUid="{data.image.0.link}">
+        <f:image image="{data.image.0}" alt="{data.header}" title="{data.header}" class="img-responsive" width="708" />
+      </f:link.page>
     </f:if>
     <f:if condition="{data.header}">
       <figcaption>{data.header}</figcaption>

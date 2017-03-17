@@ -1,15 +1,28 @@
 /**
  * INCLUDE EXTENSION TYPOSCRIPT
  */
+
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:cs_seo/Configuration/TypoScript/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:scriptmerger/Configuration/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/setup.txt">
 
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/gridelements_setup.ts">
 
+
+/**
+ * Fix missing styles.content.get
+ */
+lib.content.get = CONTENT
+lib.content.get {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where = colPos=0
+    }
+}
 
 
 /**
@@ -102,9 +115,9 @@ page.10.variables {
    *
    * colPos 11
    */
-  stage = TEXT
-  stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
-  stage < styles.content.get
+  #stage = TEXT
+  #stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
+  stage < lib.content.get
   stage.select.where = colPos = 11
 
   /**
@@ -148,8 +161,8 @@ page.10.variables {
    *
    * colPos 21
    */
-  content < styles.content.get
-  content.select.where = colPos = 21
+  contentarea < lib.content.get
+  contentarea.select.where = colPos = 21
 
   /**
    * Footercontent (Start)
@@ -222,3 +235,4 @@ page.10.variables {
     }
   }
 }
+
