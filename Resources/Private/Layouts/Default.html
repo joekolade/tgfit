@@ -3,7 +3,9 @@
     <section class="container stage">
         <f:if condition="{pagelayout} == 2">
             <f:then>
-                {stage -> f:format.raw()}
+
+                <f:cObject typoscriptObjectPath="lib.stage" />
+
             </f:then>
             <f:else>
                 <div class="stage__item_area">
@@ -11,7 +13,9 @@
                         <f:if condition="{stage}">
                             <f:then>
                                 <div class="col-xs-8">
-                                    {stage -> f:format.raw()}
+
+                                    <f:cObject typoscriptObjectPath="lib.stage" />
+
                                 </div>
                                 <div class="col-xs-4">
                                     <div class="content">

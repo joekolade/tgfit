@@ -111,16 +111,6 @@ page.10.variables {
   }
 
   /**
-   * stage
-   *
-   * colPos 11
-   */
-  #stage = TEXT
-  #stage.value = <div class="stage__item"><img src="typo3conf/ext/tgfit/Resources/Public/Images/tgfit_header_komplett.jpg" class="img-responsive"> <span class="sr-only">Herzsport, Gymnastik; Baby in Bewegung, Rückenfitness, Kettlebell, Lungensport, Pilates, Nordic Walking, Workout, Sport nach Krebs, Prävention</span></div>
-  stage < lib.content.get
-  stage.select.where = colPos = 11
-
-  /**
    * Menu-Prototype
    *
    */
@@ -155,14 +145,6 @@ page.10.variables {
     2 < .1
     2.wrap = <ul class="subnav">|</ul>
   }
-
-  /**
-   * Pagecontent
-   *
-   * colPos 21
-   */
-  contentarea < lib.content.get
-  contentarea.select.where = colPos = 21
 
   /**
    * Footercontent (Start)
@@ -236,3 +218,20 @@ page.10.variables {
   }
 }
 
+# Libs
+
+
+lib {
+    //
+    // stage
+    // colPos 11
+    stage < lib.content.get
+    stage.select.where = colPos = 11
+
+
+    //
+    // Pagecontent
+    // colPos 21
+    contentarea < lib.content.get
+    contentarea.select.where = colPos = 21
+}
