@@ -527,7 +527,7 @@
                     "type": "check",
                     "items": [
                         [
-                            "verbergen (nur wenn Stage\/B\u00fchne leer)",
+                            "Title verbergen",
                             "1"
                         ]
                     ],
