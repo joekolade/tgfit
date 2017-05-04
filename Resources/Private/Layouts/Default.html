@@ -15,14 +15,16 @@
                         <f:cObject typoscriptObjectPath="lib.stage"/>
 
                     </div>
-                    <f:if condition="!{data.tx_mask_page_hide_title}">
+                </div>
+                <f:if condition="!{data.tx_mask_page_hide_title}">
+                    <div class="row">
                         <div class="col-xs-12">
                             <div class="content">
                                 <h1>{data.title -> f:format.raw()}</h1>
                             </div>
                         </div>
-                    </f:if>
-                </div>
+                    </div>
+                </f:if>
             </div>
         </f:else>
     </f:if>
