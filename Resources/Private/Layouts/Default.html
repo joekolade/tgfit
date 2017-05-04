@@ -1,46 +1,37 @@
 <div id="page" {f:if(condition: '{pageareacolor}', then: ' class="{pageareacolor}"')}>
-    <f:render partial="Header.html" arguments="{_all}"></f:render>
-    <section class="container stage">
-        <f:if condition="{pagelayout} == 2">
-            <f:then>
+<f:render partial="Header.html" arguments="{_all}"></f:render>
+<section class="container stage">
+    <f:if condition="{pagelayout} == 2">
+        <f:then>
 
-                <f:cObject typoscriptObjectPath="lib.stage" />
+            <f:cObject typoscriptObjectPath="lib.stage"/>
 
-            </f:then>
-            <f:else>
-                <div class="stage__item_area">
-                    <div class="row">
-                        <f:if condition="!{data.tx_mask_page_hide_title}">
-                            <f:then>
-                                <div class="col-xs-8">
+        </f:then>
+        <f:else>
+            <div class="stage__item_area">
+                <div class="row">
+                    <div class="col-xs-12">
 
-                                    <f:cObject typoscriptObjectPath="lib.stage" />
+                        <f:cObject typoscriptObjectPath="lib.stage"/>
 
-                                </div>
-                                <div class="col-xs-4">
-                                    <div class="content">
-                                        <h1>{data.title -> f:format.raw()}</h1>
-                                    </div>
-                                </div>
-                            </f:then>
-                            <f:else>
-                                <div class="col-xs-12">
-                                    <div class="content">
-                                        <h1>{data.title -> f:format.raw()}</h1>
-                                    </div>
-                                </div>
-                            </f:else>
-                        </f:if>
                     </div>
+                    <f:if condition="!{data.tx_mask_page_hide_title}">
+                        <div class="col-xs-12">
+                            <div class="content">
+                                <h1>{data.title -> f:format.raw()}</h1>
+                            </div>
+                        </div>
+                    </f:if>
                 </div>
-            </f:else>
-        </f:if>
-    </section>
+            </div>
+        </f:else>
+    </f:if>
+</section>
 
-    <section class="container content">
-        <f:render section="content" />
-    </section>
+<section class="container content">
+    <f:render section="content"/>
+</section>
 
-    <f:render partial="Footer.html" arguments="{_all}" />
+<f:render partial="Footer.html" arguments="{_all}"/>
 
 </div>

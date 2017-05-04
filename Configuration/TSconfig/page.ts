@@ -77,12 +77,12 @@ TCEFORM.sys_file_reference.crop.config.cropVariants {
                 title = 1:1
                 value = 1
             }
-            stage1 {
-                title = Stage / Bühne neben Titel
-                value = 2.4083333333
-            }
+#            stage1 {
+#                title = Stage / Bühne neben Titel
+#                value = 2.4083333333
+#            }
             stage2 {
-                title = Stage / Bühne OHNE Titel
+                title = Stage / Bühne (OHNE Titel)
                 value = 3.6099585062
             }
         }
