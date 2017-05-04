@@ -58,23 +58,43 @@ TCEFORM.tt_content.imageorient {
 
 TCEFORM.sys_file_reference.crop.config.cropVariants {
     default {
-        title = Default desktop
+        title = Standard
         selectedRatio = NaN
         allowedAspectRatios {
             NaN {
-                title = free
+                title = frei
                 value = 0.0
             }
-        }
-    }
-    specialMobile {
-        title = Our special mobile variant
-        selectedRatio = NaN
-        allowedAspectRatios {
+            16:9 {
+                title = 16:9
+                value = 1.7777777777777777'
+            }
             4:3 {
-                title = ratio 4/3
-                value = 1.3333333
+                title = 4:3
+                value = 1.3333333333333333
+            }
+            1:1 {
+                title = 1:1
+                value = 1
+            }
+            stage1 {
+                title = Stage / Bühne neben Titel
+                value = 2.4083333333
+            }
+            stage2 {
+                title = Stage / Bühne OHNE Titel
+                value = 3.6099585062
             }
         }
     }
+#    specialMobile {
+#        title = Our special mobile variant
+#        selectedRatio = NaN
+#        allowedAspectRatios {
+#            4:3 {
+#                title = ratio 4/3
+#                value = 1.3333333
+#            }
+#        }
+#    }
 }
