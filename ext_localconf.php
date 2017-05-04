@@ -7,7 +7,7 @@ if ( strlen($_EXTCONF) ) {
   $extConf = unserialize($_EXTCONF);
 }
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/tsconfig.ts">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TSconfig/page.ts">');
 
 $rootlinefields = &$GLOBALS["TYPO3_CONF_VARS"]["FE"]["addRootLineFields"];
 if($rootlinefields != '')
