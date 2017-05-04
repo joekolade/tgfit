@@ -1,13 +1,6 @@
 <div id="page" {f:if(condition: '{pageareacolor}', then: ' class="{pageareacolor}"')}>
     <f:render partial="Header.html" arguments="{_all}"></f:render>
     <section class="container stage">
-        <f:if condition="{pagelayout} == 2">
-            <f:then>
-
-                <f:cObject typoscriptObjectPath="lib.stage" />
-
-            </f:then>
-            <f:else>
                 <div class="stage__item_area">
                     <div class="row">
                         <f:if condition="{stage}">
@@ -35,8 +28,6 @@
                         </f:if>
                     </div>
                 </div>
-            </f:else>
-        </f:if>
     </section>
 
     <section class="container content">
