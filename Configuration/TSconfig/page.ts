@@ -54,3 +54,27 @@ TCEFORM.tt_content.imageorient {
     altLabels.0 = oben
     altLabels.8 = unten
 }
+
+
+TCEFORM.sys_file_reference.crop.config.cropVariants {
+    default {
+        title = Default desktop
+        selectedRatio = NaN
+        allowedAspectRatios {
+            NaN {
+                title = free
+                value = 0.0
+            }
+        }
+    }
+    specialMobile {
+        title = Our special mobile variant
+        selectedRatio = NaN
+        allowedAspectRatios {
+            4:3 {
+                title = ratio 4/3
+                value = 1.3333333
+            }
+        }
+    }
+}
