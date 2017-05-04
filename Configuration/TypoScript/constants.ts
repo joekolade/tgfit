@@ -24,8 +24,8 @@ pageIds {
 
 
 styles.content.loginform.pid = 0
-styles.content.textmedia.maxW = 870
-styles.content.textmedia.maxWInText = 870
+styles.content.textmedia.maxW = 900
+styles.content.textmedia.maxWInText = 900
 styles.content.textmedia.linkWrap.width = 1200m
 styles.content.textmedia.linkWrap.height = 720m
 

@@ -9,13 +9,6 @@
         </f:then>
         <f:else>
             <div class="stage__item_area">
-                <div class="row">
-                    <div class="col-xs-12">
-
-                        <f:cObject typoscriptObjectPath="lib.stage"/>
-
-                    </div>
-                </div>
                 <f:if condition="!{data.tx_mask_page_hide_title}">
                     <div class="row">
                         <div class="col-xs-12">
@@ -25,6 +18,13 @@
                         </div>
                     </div>
                 </f:if>
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <f:cObject typoscriptObjectPath="lib.stage"/>
+
+                    </div>
+                </div>
             </div>
         </f:else>
     </f:if>
