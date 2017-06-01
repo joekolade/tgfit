@@ -1,0 +1,61 @@
+// Import Font.com Frutiger
+@import 'fonts';
+// Import Variables
+@import 'tg-variables';
+
+$icon-font-path: '../fonts/';
+$fa-font-path: '../fonts';
+$slick-font-path: '../fonts';
+
+//
+// MMenu
+//
+$mm_backgroundColor: $gray-lighter;
+$mm_navbarColor: $color-tgblau;
+// $mm_borderColor: $gray-lighter;
+
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit from bottom */
+body {
+  padding-top: 20px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+// Common mixins
+@import 'mixins';
+
+// Parts &
+// Blocks
+@import 'content';
+
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/teaser';
+@import 'blocks/panel-tg';
+@import 'blocks/events';
+
+@import 'blocks/stage';
+@import 'blocks/slickslider';
+
+// bricks
+@import '../bricks/schedule/schedule_styles';

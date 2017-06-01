@@ -1,0 +1,31 @@
+//
+// Transition
+//
+@mixin transition($properties: all){
+  transition-property: $properties;
+  transition-duration: $transition-duration;
+  transition-easing: $transition-easing;
+}
+@mixin transition_delayed($properties: all, $delay: $transition-delay){
+  @include transition($properties);
+  transition-delay: $delay;
+}
+
+//
+// Color handling
+//
+.bg {
+  @each $b, $c, $fc in $bereiche {
+    &-#{$b} {
+      background-color: lighten($c, $color-lighten-amount);
+      background-color: $c;
+
+      color: $fc;
+
+      h1,h2,h3,h4 {
+        color: $fc;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+hr {
+  border-color: $color-tgblau;
+}
+
+.content {
+  .bg-blau {
+    padding-top: $grid-gutter-width/2;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: $color-hellblau;
+
+  }
+}

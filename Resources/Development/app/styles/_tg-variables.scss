@@ -1,0 +1,113 @@
+//
+// Base
+//
+$transition-duration: 0.4s;
+$transition-easing: ease-in;
+// Default delay - if set
+$transition-delay: .3s;
+
+//
+// Colors
+//
+$color-lighten-amount: 35%;
+
+$color-blau: #2151a2;
+$color-gelb: #efd51c;
+$color-hellgelb: #fbf309;
+$color-orange: #e8c521;
+$color-gruen: #ceda26;
+$color-hellblau: #C5E6FC;
+
+// Test magenta
+$color-magenta: #dea7c7;
+
+// Farbzuweisung
+$color-tgblau: $color-blau;
+$color-tggelb: $color-gelb;
+$color-gesundfit: $color-hellgelb;
+$color-f4l: $color-orange;
+$color-rehafit: $color-gruen;
+$color-bgm: $color-magenta;
+
+
+$bereiche: (gesundfit, $color-gesundfit), (f4l, $color-f4l), (rehafit, $color-rehafit), (bgm, $color-bgm), (tgblau, $color-tgblau, white), (tggelb, $color-tggelb);
+
+//
+// Animations
+//
+$transition-base: all 0.3s ease-in;
+
+
+//
+// Bootstrap overwrite
+//
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+
+$brand-primary: $color-tgblau;
+$brand-info: $color-tggelb;
+
+$text-color:            $gray-dark;
+$link-color:            $brand-primary;
+
+$link-hover-decoration: none;
+
+$font-family-base: 'Arial', sans-serif;
+$headings-font-family: $frutiger;
+$headings-color: $color-tgblau;
+
+$border-radius-base: 0;
+
+$font-size-base:          13px;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~19px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~13px
+
+
+//
+// Navbar
+//
+$nav-link-color: $gray-light;
+
+//
+// Panel
+//
+// $panel-bg:                    #fff !default;
+
+//** Border color for elements within panels
+$panel-footer-bg:             #f5f5f5 !default;
+
+$panel-default-text:          $gray-dark !default;
+$panel-default-border:        #ddd !default;
+$panel-default-heading-bg:    #f5f5f5 !default;
+
+// $panel-primary-text:          #fff !default;
+// $panel-primary-border:        $brand-primary !default;
+// $panel-primary-heading-bg:    $brand-primary !default;
+
+//
+// Quicklinks / Panels
+//
+$color-quick: $gray-darker;
+
+//
+// Navbar
+//
+$color-minilogo: white;
+$color-minilogo-hover: $color-tggelb;
+
+//
+// TG Panel
+//
+$color-panel-tg-bg: $gray-darker;
+
+//
+// Footer
+//
+$color-footer: $gray-darker;
+$color-superfooter-bg: $gray-darker;
+$color-superfooter: white;

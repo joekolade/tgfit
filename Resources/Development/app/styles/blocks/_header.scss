@@ -1,0 +1,134 @@
+header {
+  position: relative;
+
+  .logo {
+    text-align: center;
+    display: block;
+    img {
+      max-width: 200px;
+      max-height: 80px;
+    }
+
+    transition: transform .1s ease-in;
+    &:hover {
+      transform: scale(1.02) rotate(-1deg);
+    }
+  }
+
+  nav {
+    a {
+      color: $nav-link-color;
+    }
+    ul {
+      margin-top: 1em;
+      text-align: center;
+      li {
+        display: inline-block;
+        > a {
+          display: block;
+        }
+        &:hover > a {
+          color: $color-tgblau;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: $screen-sm-min) {
+  header {
+    // font-size: 13px;
+    height: 62px;
+
+    .logo {
+      text-align: left;
+      position: relative;
+      z-index: 2;
+    }
+
+    nav {
+      ul.list-inline {
+        width: 100%;
+        margin-top: 42px;
+        position: absolute;
+        text-align: right;
+        right: $grid-gutter-width/2;
+      }
+    }
+  }
+}
+
+
+
+//***********************
+// Dropdown Menü
+// Only on Desktop
+//***********************
+header {
+  a[href="#navmenu"] {
+    float: right;
+    font-size: 2em;
+    margin-top: 0.3em;
+    margin-right: 15px;
+    display: inline-block;
+  }
+  margin-bottom: 2em;
+}
+.mm-menu {
+  ul.list-inline {
+    li {
+      display: block;
+    }
+  }
+}
+
+#mm-navmenu,
+#navmenu {
+  li.active {
+    > a {
+      color: $color-tgblau;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  header {
+    ul.list-inline {
+
+      > li {
+        position: relative;
+        display: inline-block;
+
+        &:hover {
+          ul.subnav {
+            max-height: 999px;
+          }
+        }
+      }
+    }
+    ul.subnav {
+      text-align: left;
+      position: absolute;
+      z-index: 22;
+      top: 5px;
+      left: 0;
+      padding: 0;
+
+      max-height: 0;
+      overflow: hidden;
+      background: $gray-lighter;
+      transition: max-height 0.4s ease-in;
+
+      li {
+        display: block;
+        // min-width: 100vw;
+        min-width: 120px;
+        margin: 5px 12px;
+        &:first-child {
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+}

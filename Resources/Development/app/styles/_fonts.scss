@@ -1,0 +1,7 @@
+@import "//fast.fonts.net/cssapi/4b43d3e8-1443-4400-bb12-708014cba2ed.css";
+
+$frutiger: 'Frutiger W01', Arial, sans-serif;
+
+@mixin frutiger() {
+  font-family: 'Frutiger W01', Arial, sans-serif;
+}

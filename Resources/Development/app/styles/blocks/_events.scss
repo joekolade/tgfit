@@ -1,0 +1,60 @@
+.events {
+
+  background-color: $color-hellblau;
+  padding-top: $grid-gutter-width/2;
+
+  // @each $b, $c in $bereiche {
+  //   .#{$b} & {
+  //     background-color: lighten($c, $color-lighten-amount);
+  //   }
+  // }
+
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: $grid-gutter-width/2;
+    border-left: 4px solid white;
+
+    @each $b, $c, $fc in $bereiche {
+      .bg-#{$b} + .events & {
+        border-color: $c;
+        border-color: $fc;
+      }
+    }
+    position: relative;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background-color: $color-tgblau;;
+    }
+
+    h4 {
+      margin-top: 0;
+    }
+
+   @media (min-width: 561px) {
+     width: 50%;
+   }
+
+   @media (min-width: $screen-sm-min) {
+      width: 33.33333%;
+    }
+  }
+
+  &__data {
+    .place,
+    .master {
+      display: block;
+    }
+  }
+
+}
