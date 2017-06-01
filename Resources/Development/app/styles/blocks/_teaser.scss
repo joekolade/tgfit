@@ -1,0 +1,73 @@
+$teaser--figcaption-bg: rgba(255,255,255,0.8);
+
+.teaser {
+  text-align: center;
+  margin-bottom: 2em;
+
+  figure {
+    position: relative;
+  }
+  img {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  figcaption {
+    position: absolute;
+    bottom: 0.7em;
+    background: $teaser--figcaption-bg;
+    padding: 4px 12px 4px 18px;
+    font-style: italic;
+    font-size: 1.5em;
+    @include frutiger;
+    color: $color-tgblau;
+    @include transition(padding);
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 1.8em 0.5em 0 0;
+      border-color: $teaser--figcaption-bg transparent transparent transparent;
+      position: absolute;
+      left: 100%;
+      top: 0;
+    }
+  }
+
+  &:hover {
+    figcaption {
+      padding-left: 28px;
+    }
+  }
+
+  .btn {
+    color: $color-tgblau;
+    border: none;
+    line-height: 1.6;
+    border-radius: 1.6em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  @each $b, $c, $fc in $bereiche {
+    &_#{$b} {
+      img {
+        background-color: $c;
+
+        &::after {
+          content: attr(alt);
+        }
+      }
+    }
+    .teaser--btn_#{$b} {
+      background-color: $c;
+      @include transition(color);
+
+      &:hover {
+        // background-color: darken($c,15%);
+        color: black;
+      }
+    }
+  }
+}
