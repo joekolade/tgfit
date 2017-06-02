@@ -82,23 +82,25 @@
                 "description": "Kurs f\u00fcr Stundenplan",
                 "icon": "fa-calendar-o",
                 "color": "#ff7d00",
-                "columns": [
-                    "header",
-                    "tx_mask_eventstart",
-                    "tx_mask_eventend",
-                    "tx_mask_eventmore",
-                    "tx_mask_eventinfo"
-                ],
                 "labels": [
                     "Kurstitel",
                     "Start",
                     "Ende",
+                    "Bereich",
                     "Meta-Info",
                     "Info \/ Beschreibung"
                 ],
+                "columns": [
+                    "tx_mask_eventtitle",
+                    "tx_mask_eventstart",
+                    "tx_mask_eventend",
+                    "tx_mask_eventarea",
+                    "tx_mask_eventmore",
+                    "tx_mask_eventinfo"
+                ],
                 "options": {
-                    "3": "rte",
-                    "4": "rte"
+                    "4": "rte",
+                    "5": "rte"
                 }
             },
             "teaserbox": {
@@ -168,26 +170,6 @@
                     "tx_mask_kursbox_cmitte": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
-            "tx_mask_eventstart": {
-                "tt_content": {
-                    "tx_mask_eventstart": "tinytext"
-                }
-            },
-            "tx_mask_eventend": {
-                "tt_content": {
-                    "tx_mask_eventend": "tinytext"
-                }
-            },
-            "tx_mask_eventmore": {
-                "tt_content": {
-                    "tx_mask_eventmore": "text"
-                }
-            },
-            "tx_mask_eventinfo": {
-                "tt_content": {
-                    "tx_mask_eventinfo": "text"
-                }
-            },
             "tx_mask_schedule1": {
                 "tt_content": {
                     "tx_mask_schedule1": "int(11) unsigned DEFAULT '0' NOT NULL"
@@ -211,6 +193,36 @@
             "tx_mask_schedule5": {
                 "tt_content": {
                     "tx_mask_schedule5": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_eventtitle": {
+                "tt_content": {
+                    "tx_mask_eventtitle": "tinytext"
+                }
+            },
+            "tx_mask_eventstart": {
+                "tt_content": {
+                    "tx_mask_eventstart": "tinytext"
+                }
+            },
+            "tx_mask_eventend": {
+                "tt_content": {
+                    "tx_mask_eventend": "tinytext"
+                }
+            },
+            "tx_mask_eventarea": {
+                "tt_content": {
+                    "tx_mask_eventarea": "tinytext"
+                }
+            },
+            "tx_mask_eventmore": {
+                "tt_content": {
+                    "tx_mask_eventmore": "text"
+                }
+            },
+            "tx_mask_eventinfo": {
+                "tt_content": {
+                    "tx_mask_eventinfo": "text"
                 }
             }
         },
@@ -447,62 +459,6 @@
                 ],
                 "key": "kursbox_cmitte"
             },
-            "tx_mask_eventstart": {
-                "config": {
-                    "type": "input",
-                    "eval": "required",
-                    "default": "",
-                    "placeholder": "9:00",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "key": "eventstart"
-            },
-            "tx_mask_eventend": {
-                "config": {
-                    "type": "input",
-                    "eval": "required",
-                    "default": "",
-                    "placeholder": "18:00",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "key": "eventend"
-            },
-            "tx_mask_eventmore": {
-                "config": {
-                    "type": "text",
-                    "eval": "",
-                    "richtextConfiguration": "default",
-                    "enableRichtext": "1",
-                    "cols": "",
-                    "rows": "",
-                    "default": "",
-                    "placeholder": "",
-                    "max": ""
-                },
-                "exclude": "1",
-                "key": "eventmore"
-            },
-            "tx_mask_eventinfo": {
-                "config": {
-                    "type": "text",
-                    "eval": "",
-                    "richtextConfiguration": "default",
-                    "enableRichtext": "1",
-                    "cols": "",
-                    "rows": "",
-                    "default": "",
-                    "placeholder": "",
-                    "max": ""
-                },
-                "exclude": "1",
-                "key": "eventinfo"
-            },
             "tx_mask_schedule1": {
                 "config": {
                     "type": "inline",
@@ -687,6 +643,113 @@
                 ],
                 "l10n_mode": "copy",
                 "key": "schedule5"
+            },
+            "tx_mask_eventtitle": {
+                "config": {
+                    "type": "input",
+                    "eval": "required,trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "eventtitle"
+            },
+            "tx_mask_eventstart": {
+                "config": {
+                    "type": "input",
+                    "eval": "required",
+                    "default": "",
+                    "placeholder": "9:00",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "eventstart"
+            },
+            "tx_mask_eventend": {
+                "config": {
+                    "type": "input",
+                    "eval": "required",
+                    "default": "",
+                    "placeholder": "18:00",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "eventend"
+            },
+            "tx_mask_eventarea": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "kein Bereich",
+                            "0"
+                        ],
+                        [
+                            "Gesund & Fit",
+                            "gesundfit"
+                        ],
+                        [
+                            "Fit for Life",
+                            "f4l"
+                        ],
+                        [
+                            "Reha-Fit",
+                            "rehafit"
+                        ],
+                        [
+                            "BGM",
+                            "bgm"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "eventarea"
+            },
+            "tx_mask_eventmore": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "eventmore"
+            },
+            "tx_mask_eventinfo": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "eventinfo"
             }
         }
     },
