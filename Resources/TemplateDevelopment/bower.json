@@ -1,22 +1,28 @@
 {
-  "name": "template",
-  "private": true,
+  "name": "templatedevelopment",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Joe Schäfer <schaefer@scw.info>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1",
-    "slick-carousel": "^1.6.0"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
-    }
-  },
-  "devDependencies": {
+    "bootstrap": "^3.3.7",
     "chai": "^3.5.0",
-    "mocha": "^3.1.0"
+    "font-awesome": "^4.7.0",
+    "jasny-bootstrap": "^3.1.3",
+    "mocha": "^3.1.0",
+    "modernizr": "~2.8.1",
+    "slick-carousel": "^1.6.0",
+    "jQuery.mmenu": "^6.1.0"
   }
 }
