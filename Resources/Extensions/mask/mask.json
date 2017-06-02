@@ -65,17 +65,20 @@
                     "tx_mask_eventstart",
                     "tx_mask_eventend",
                     "tx_mask_eventarea",
-                    "tx_mask_eventinfo"
+                    "tx_mask_eventinfo",
+                    "tx_mask_eventmore"
                 ],
                 "labels": [
                     "Kurstitel",
                     "Start",
                     "Ende",
                     "Bereich",
-                    "Info \/ Beschreibung"
+                    "Info \/ Beschreibung",
+                    "Meta-Info"
                 ],
                 "options": {
-                    "4": "rte"
+                    "4": "rte",
+                    "5": "rte"
                 }
             },
             "teaserbox": {
@@ -168,6 +171,11 @@
             "tx_mask_eventinfo": {
                 "tt_content": {
                     "tx_mask_eventinfo": "text"
+                }
+            },
+            "tx_mask_eventmore": {
+                "tt_content": {
+                    "tx_mask_eventmore": "text"
                 }
             }
         },
@@ -491,6 +499,21 @@
                 },
                 "exclude": "1",
                 "key": "eventinfo"
+            },
+            "tx_mask_eventmore": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "24",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "eventmore"
             }
         }
     },
