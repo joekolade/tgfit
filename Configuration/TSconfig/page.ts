@@ -46,7 +46,7 @@ tx_gridelements {
     setup.scheduler {
         title = Stundenplan
         description = Stundenplan (mo-fr) für einzelne Kursblöcke
-        frame = 3
+        frame = 1
         topLevelLayout = 1
 
         config {
@@ -57,24 +57,29 @@ tx_gridelements {
                     1 {
                         name = Montag
                         colPos = 101
+                        allowed = mask_scheduleevent
                     }
                     2 {
                         name = Dienstag
                         colPos = 102
+                        allowed = mask_scheduleevent
                     }
                     3 {
                         name = Mittwoch
                         colPos = 103
+                        allowed = mask_scheduleevent
                     }
                     4 < .1
                     4 {
                         name = Donnerstag
                         colPos = 103
+                        allowed = mask_scheduleevent
                     }
                     5 < .1
                     5 {
                         name = Freitag
                         colPos = 103
+                        allowed = mask_scheduleevent
                     }
                 }
             }
