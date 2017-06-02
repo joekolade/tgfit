@@ -53,6 +53,40 @@
                     "3": "rte"
                 }
             },
+            "schedule": {
+                "label": "Stundenplan",
+                "key": "schedule",
+                "shortLabel": "",
+                "description": "Stundenplan (mo-fr) f\u00fcr einzelne Kursbl\u00f6cke",
+                "icon": "fa-calendar",
+                "color": "#ff7d00"
+            },
+            "scheduleevent": {
+                "label": "Kurs",
+                "key": "scheduleevent",
+                "shortLabel": "",
+                "description": "Kurs f\u00fcr Stundenplan",
+                "icon": "fa-calendar-o",
+                "color": "#ff7d00",
+                "columns": [
+                    "header",
+                    "tx_mask_eventstart",
+                    "tx_mask_eventend",
+                    "tx_mask_eventmore",
+                    "tx_mask_eventinfo"
+                ],
+                "labels": [
+                    "Kurstitel",
+                    "Start",
+                    "Ende",
+                    "Meta-Info",
+                    "Info \/ Beschreibung"
+                ],
+                "options": {
+                    "3": "rte",
+                    "4": "rte"
+                }
+            },
             "teaserbox": {
                 "label": "Bereich Teaser-Box",
                 "key": "teaserbox",
@@ -118,6 +152,26 @@
             "tx_mask_kursbox_cmitte": {
                 "tt_content": {
                     "tx_mask_kursbox_cmitte": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_eventstart": {
+                "tt_content": {
+                    "tx_mask_eventstart": "tinytext"
+                }
+            },
+            "tx_mask_eventend": {
+                "tt_content": {
+                    "tx_mask_eventend": "tinytext"
+                }
+            },
+            "tx_mask_eventmore": {
+                "tt_content": {
+                    "tx_mask_eventmore": "text"
+                }
+            },
+            "tx_mask_eventinfo": {
+                "tt_content": {
+                    "tx_mask_eventinfo": "text"
                 }
             }
         },
@@ -353,6 +407,62 @@
                     "mask_kursblock"
                 ],
                 "key": "kursbox_cmitte"
+            },
+            "tx_mask_eventstart": {
+                "config": {
+                    "type": "input",
+                    "eval": "required",
+                    "default": "",
+                    "placeholder": "9:00",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "eventstart"
+            },
+            "tx_mask_eventend": {
+                "config": {
+                    "type": "input",
+                    "eval": "required",
+                    "default": "",
+                    "placeholder": "18:00",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "eventend"
+            },
+            "tx_mask_eventmore": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "eventmore"
+            },
+            "tx_mask_eventinfo": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "eventinfo"
             }
         }
     },

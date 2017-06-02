@@ -7,6 +7,14 @@ $icon-font-path: '../fonts/';
 $fa-font-path: '../fonts';
 $slick-font-path: '../fonts';
 
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
+// endbower
+
+
 //
 // MMenu
 //
@@ -14,12 +22,6 @@ $mm_backgroundColor: $gray-lighter;
 $mm_navbarColor: $color-tgblau;
 // $mm_borderColor: $gray-lighter;
 
-
-// bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/slick-carousel/slick/slick.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss";
-// endbower
 
 
 .browserupgrade {

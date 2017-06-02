@@ -1,5 +1,5 @@
+// http://www.jqueryrain.com/?qL64jzeo
 
-@import "../../Development/app/styles/main.scss"; // colors, fonts etc...
 
 @import "partials/variables"; // colors, fonts etc...
 
@@ -24,7 +24,7 @@ Main Components
 -------------------------------- */
 .cd-schedule {
   position: relative;
-  margin: 2em 0;
+  margin: 0;
 
   &::before {
     /* never visible - this is used in js to check the current MQ */
@@ -33,9 +33,9 @@ Main Components
   }
 
   @include MQ(M) {
-    width: 90%;
+    //width: 90%;
     max-width: 1400px;
-    margin: 2em auto;
+
     @include clearfix;
 
     &::before {
@@ -90,8 +90,8 @@ Main Components
     li {
 
       &::after {
-        width: calc(100% - 60px);
-        left: 60px;
+        width: calc(100% - #{$event-offset-left});
+        left: $event-offset-left;
       }
 
       span {
@@ -257,8 +257,8 @@ Main Components
 
   @include MQ(L) {
     /* 60px is the .timeline element width */
-    width: calc(100% - 60px);
-    margin-left: 60px;
+    width: calc(100% - #{$event-offset-left});
+    margin-left: $event-offset-left;
   }
 }
 
@@ -271,7 +271,7 @@ Main Components
 .cd-schedule .event-name,
 .cd-schedule .event-date {
   display: block;
-  color: white;
+  //color: white;
   font-weight: bold;
   @include font-smoothing;
 }
@@ -284,10 +284,16 @@ Main Components
   }
 }
 .cd-schedule .event-more {
-  display: none;
+  opacity: 0;
+  overflow: hidden;
+
+  transition: none;
 }
-.cd-schedule .event-modal .event-more {
-  display: block;
+.animation-completed.modal-is-open .event-more {
+  height: auto;
+  opacity: 1;
+  transition: opacity .2s;
+  transition-delay: .4s;
 }
 .cd-schedule .event-info {
   height: 0px;
@@ -312,30 +318,30 @@ Main Components
   background: lighten($event-color-1, 5%);
 }
 
-.cd-schedule .single-event[data-event="event-2"],
-.cd-schedule [data-event="event-2"] .header-bg {
+.cd-schedule .single-event[data-event="event__f4l"],
+.cd-schedule [data-event="event__f4l"] .header-bg {
   background: $event-color-2;
 }
 
-.cd-schedule .single-event[data-event="event-2"]:hover {
+.cd-schedule .single-event[data-event="event__f4l"]:hover {
   background: lighten($event-color-2, 5%);
 }
 
-.cd-schedule .single-event[data-event="event-3"],
-.cd-schedule [data-event="event-3"] .header-bg {
+.cd-schedule .single-event[data-event="event__rehafit"],
+.cd-schedule [data-event="event__rehafit"] .header-bg {
   background: $event-color-3;
 }
 
-.cd-schedule .single-event[data-event="event-3"]:hover {
+.cd-schedule .single-event[data-event="event__rehafit"]:hover {
   background: lighten($event-color-3, 5%);
 }
 
-.cd-schedule .single-event[data-event="event-4"],
-.cd-schedule [data-event="event-4"] .header-bg {
+.cd-schedule .single-event[data-event="event__bgm"],
+.cd-schedule [data-event="event__bgm"] .header-bg {
   background: $event-color-4;
 }
 
-.cd-schedule .single-event[data-event="event-4"]:hover {
+.cd-schedule .single-event[data-event="event__bgm"]:hover {
   background: lighten($event-color-4, 5%);
 }
 

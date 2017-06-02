@@ -1,18 +1,22 @@
 // colors
 
-$event-color-1: #577F92; // Smalt Blue
-$event-color-2: #443453; // Martinique
+
+//$event-color-1: #577F92; // Smalt Blue
+//$event-color-2: #443453; // Martinique
 $event-color-3: #A2B9B2; // Edward
 $event-color-4: #f6b067; // Rajah
+
+$event-color-1: $color-gesundfit; // gesundfit
+$event-color-2: $color-f4l; // Fit4Life
+$event-color-3: $color-rehafit; // Reha-Fit
+$event-color-4: $color-bgm; // BGM
+
+$event-offset-left: 60px;
 
 $text-color: #222222;
 $border-color: #EAEAEA;
 $bg-color: white;
 $link-color: $event-color-3;
-
-// fonts
-
-$primary-font: 'Source Sans Pro', sans-serif;
 
 //colum number
 

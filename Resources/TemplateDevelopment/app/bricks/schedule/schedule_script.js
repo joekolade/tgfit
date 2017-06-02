@@ -112,7 +112,8 @@ jQuery(document).ready(function($){
 
         //update event name and time
         this.modalHeader.find('.event-name').html(event.find('.event-name').html());
-        this.modalHeader.find('.event-date').html(event.closest('.events-group').find('.top-info').text() + "<br>" + event.find('.event-date').text());
+        // this.modalHeader.find('.event-date').html(event.closest('.events-group').find('.top-info').text() + "<br>" + event.find('.event-date').text());
+        this.modalHeader.find('.event-date').html(event.find('.event-date').text());
         this.modal.attr('data-event', event.parent().attr('data-event'));
 
         //update event content

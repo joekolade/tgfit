@@ -116,6 +116,8 @@ gulp.task('serve', () => {
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
+    gulp.watch('app/bricks/**/*.scss', ['styles']);
+    gulp.watch('app/bricks/**/*.js', ['scripts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
 });

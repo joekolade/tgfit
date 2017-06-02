@@ -1,0 +1,24 @@
+<li class="single-event" data-start="{data.tx_mask_eventstart}" data-end="{data.tx_mask_eventend}"
+    data-content="event-abs-circuit"
+    data-event="event__gesundfit">
+    <a href="#0">
+        <div class="event-name">
+            <h3>{data.header}</h3>
+            <f:if condition="{data.tx_mask_eventmore}">
+                <p class="event-more">
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_eventinfo}</f:format.html>
+                </p>
+            </f:if>
+        </div>
+        <div class="event-info">
+
+            <div>
+                <f:if condition="{data.tx_mask_eventinfo}">
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_eventinfo}</f:format.html>
+                </f:if>
+                <!--@todo: Link zu coursika-->
+            </div>
+
+        </div>
+    </a>
+</li>
