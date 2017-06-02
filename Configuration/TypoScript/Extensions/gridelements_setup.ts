@@ -9,6 +9,15 @@ lib.bootstrap_grids {
     wrap = <div class="row bg-blau">|</div>
   }
 }
+tt_content.gridelements_pi1.20.10.setup {
+    scheduler < lib.gridelements.defaultGridSetup
+    scheduler {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:tgfit/Resources/Extensions/gridelements/scheduler.html
+        }
+    }
+}
 
 
 /** ------------------------------------------------

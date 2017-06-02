@@ -53,28 +53,6 @@
                     "3": "rte"
                 }
             },
-            "schedule": {
-                "label": "Stundenplan",
-                "key": "schedule",
-                "shortLabel": "",
-                "description": "Stundenplan (mo-fr) f\u00fcr einzelne Kursbl\u00f6cke",
-                "icon": "fa-calendar",
-                "color": "#ff7d00",
-                "columns": [
-                    "tx_mask_schedule1",
-                    "tx_mask_schedule2",
-                    "tx_mask_schedule3",
-                    "tx_mask_schedule4",
-                    "tx_mask_schedule5"
-                ],
-                "labels": [
-                    "Montag",
-                    "Dienstag",
-                    "Mittwoch",
-                    "Donnerstag",
-                    "Freitag"
-                ]
-            },
             "scheduleevent": {
                 "label": "Kurs",
                 "key": "scheduleevent",
@@ -82,25 +60,22 @@
                 "description": "Kurs f\u00fcr Stundenplan",
                 "icon": "fa-calendar-o",
                 "color": "#ff7d00",
-                "labels": [
-                    "Kurstitel",
-                    "Start",
-                    "Ende",
-                    "Bereich",
-                    "Meta-Info",
-                    "Info \/ Beschreibung"
-                ],
                 "columns": [
                     "tx_mask_eventtitle",
                     "tx_mask_eventstart",
                     "tx_mask_eventend",
                     "tx_mask_eventarea",
-                    "tx_mask_eventmore",
                     "tx_mask_eventinfo"
                 ],
+                "labels": [
+                    "Kurstitel",
+                    "Start",
+                    "Ende",
+                    "Bereich",
+                    "Info \/ Beschreibung"
+                ],
                 "options": {
-                    "4": "rte",
-                    "5": "rte"
+                    "4": "rte"
                 }
             },
             "teaserbox": {
@@ -170,31 +145,6 @@
                     "tx_mask_kursbox_cmitte": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
-            "tx_mask_schedule1": {
-                "tt_content": {
-                    "tx_mask_schedule1": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_schedule2": {
-                "tt_content": {
-                    "tx_mask_schedule2": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_schedule3": {
-                "tt_content": {
-                    "tx_mask_schedule3": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_schedule4": {
-                "tt_content": {
-                    "tx_mask_schedule4": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_schedule5": {
-                "tt_content": {
-                    "tx_mask_schedule5": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_eventtitle": {
                 "tt_content": {
                     "tx_mask_eventtitle": "tinytext"
@@ -213,11 +163,6 @@
             "tx_mask_eventarea": {
                 "tt_content": {
                     "tx_mask_eventarea": "tinytext"
-                }
-            },
-            "tx_mask_eventmore": {
-                "tt_content": {
-                    "tx_mask_eventmore": "text"
                 }
             },
             "tx_mask_eventinfo": {
@@ -459,191 +404,6 @@
                 ],
                 "key": "kursbox_cmitte"
             },
-            "tx_mask_schedule1": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "tt_content",
-                    "overrideChildTca": {
-                        "columns": {
-                            "colPos": {
-                                "config": {
-                                    "default": "999"
-                                }
-                            }
-                        }
-                    },
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "collapseAll": "1",
-                        "levelLinksPosition": "bottom",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "useSortable": "1",
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "expandSingle": "1",
-                        "newRecordLinkTitle": "Neuer Kurs"
-                    },
-                    "minitems": "",
-                    "maxitems": ""
-                },
-                "exclude": "1",
-                "cTypes": [
-                    "mask_scheduleevent"
-                ],
-                "l10n_mode": "copy",
-                "key": "schedule1"
-            },
-            "tx_mask_schedule2": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "tt_content",
-                    "overrideChildTca": {
-                        "columns": {
-                            "colPos": {
-                                "config": {
-                                    "default": "999"
-                                }
-                            }
-                        }
-                    },
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "collapseAll": "1",
-                        "levelLinksPosition": "bottom",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "useSortable": "1",
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "expandSingle": "1",
-                        "newRecordLinkTitle": "Neuer Kurs"
-                    },
-                    "minitems": "",
-                    "maxitems": ""
-                },
-                "exclude": "1",
-                "cTypes": [
-                    "mask_scheduleevent"
-                ],
-                "l10n_mode": "copy",
-                "key": "schedule2"
-            },
-            "tx_mask_schedule3": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "tt_content",
-                    "overrideChildTca": {
-                        "columns": {
-                            "colPos": {
-                                "config": {
-                                    "default": "999"
-                                }
-                            }
-                        }
-                    },
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "collapseAll": "1",
-                        "levelLinksPosition": "bottom",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "useSortable": "1",
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "expandSingle": "1",
-                        "newRecordLinkTitle": "Neuer Kurs"
-                    },
-                    "minitems": "",
-                    "maxitems": ""
-                },
-                "exclude": "1",
-                "cTypes": [
-                    "mask_scheduleevent"
-                ],
-                "l10n_mode": "copy",
-                "key": "schedule3"
-            },
-            "tx_mask_schedule4": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "tt_content",
-                    "overrideChildTca": {
-                        "columns": {
-                            "colPos": {
-                                "config": {
-                                    "default": "999"
-                                }
-                            }
-                        }
-                    },
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "collapseAll": "1",
-                        "levelLinksPosition": "bottom",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "useSortable": "1",
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "expandSingle": "1",
-                        "newRecordLinkTitle": "Neuer Kurs"
-                    },
-                    "minitems": "",
-                    "maxitems": ""
-                },
-                "exclude": "1",
-                "cTypes": [
-                    "mask_scheduleevent"
-                ],
-                "l10n_mode": "copy",
-                "key": "schedule4"
-            },
-            "tx_mask_schedule5": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "tt_content",
-                    "overrideChildTca": {
-                        "columns": {
-                            "colPos": {
-                                "config": {
-                                    "default": "999"
-                                }
-                            }
-                        }
-                    },
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "collapseAll": "1",
-                        "levelLinksPosition": "bottom",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "useSortable": "1",
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "expandSingle": "1",
-                        "newRecordLinkTitle": "Neuer Kurs"
-                    },
-                    "minitems": "",
-                    "maxitems": ""
-                },
-                "exclude": "1",
-                "cTypes": [
-                    "mask_scheduleevent"
-                ],
-                "l10n_mode": "copy",
-                "key": "schedule5"
-            },
             "tx_mask_eventtitle": {
                 "config": {
                     "type": "input",
@@ -690,10 +450,6 @@
                     "size": "",
                     "items": [
                         [
-                            "kein Bereich",
-                            "0"
-                        ],
-                        [
                             "Gesund & Fit",
                             "gesundfit"
                         ],
@@ -720,21 +476,6 @@
                 },
                 "exclude": "1",
                 "key": "eventarea"
-            },
-            "tx_mask_eventmore": {
-                "config": {
-                    "type": "text",
-                    "eval": "",
-                    "richtextConfiguration": "default",
-                    "enableRichtext": "1",
-                    "cols": "",
-                    "rows": "",
-                    "default": "",
-                    "placeholder": "",
-                    "max": ""
-                },
-                "exclude": "1",
-                "key": "eventmore"
             },
             "tx_mask_eventinfo": {
                 "config": {

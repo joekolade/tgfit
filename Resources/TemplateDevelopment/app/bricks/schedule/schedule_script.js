@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+    var timeSlotHeight = 50;
     var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
     var transitionsSupported = ( $('.csstransitions').length > 0 );
     //if browser does not support transitions - use a different event to trigger them
@@ -88,6 +89,7 @@ jQuery(document).ready(function($){
 
     SchedulePlan.prototype.placeEvents = function() {
         var self = this;
+        console.log(this.timelineUnitDuration);
         this.singleEvents.each(function(){
             //place each event in the grid -> need to set top position and height
             var start = getScheduleTimestamp($(this).attr('data-start')),
@@ -95,6 +97,8 @@ jQuery(document).ready(function($){
 
             var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
                 eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
+
+            console.log(eventTop);
 
             $(this).css({
                 top: (eventTop -1) +'px',

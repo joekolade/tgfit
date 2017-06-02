@@ -41,6 +41,45 @@ tx_gridelements {
             }
         }
     }
+
+    setup.scheduler < tx_gridelements.setup.3cols
+    setup.scheduler {
+        title = Stundenplan
+        description = Stundenplan (mo-fr) für einzelne Kursblöcke
+        frame = 3
+        topLevelLayout = 1
+
+        config {
+            colCount = 5
+            rowCount = 1
+            rows.1 {
+                columns {
+                    1 {
+                        name = Montag
+                        colPos = 101
+                    }
+                    2 {
+                        name = Dienstag
+                        colPos = 102
+                    }
+                    3 {
+                        name = Mittwoch
+                        colPos = 103
+                    }
+                    4 < .1
+                    4 {
+                        name = Donnerstag
+                        colPos = 103
+                    }
+                    5 < .1
+                    5 {
+                        name = Freitag
+                        colPos = 103
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Not used CEs

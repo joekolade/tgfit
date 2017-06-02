@@ -74,6 +74,7 @@ page {
     includeJSFooter {
         plugins = EXT:tgfit/Resources/Public/JavaScript/plugins.js
         main = EXT:tgfit/Resources/Public/JavaScript/main.js
+        scheduler = EXT:tgfit/Resources/TemplateDevelopment/app/bricks/schedule/schedule_script.js
     }
 }
 

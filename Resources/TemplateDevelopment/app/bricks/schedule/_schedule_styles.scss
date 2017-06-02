@@ -34,7 +34,7 @@ Main Components
 
   @include MQ(M) {
     //width: 90%;
-    max-width: 1400px;
+    max-width: 870px;
 
     @include clearfix;
 
@@ -110,6 +110,7 @@ Main Components
   position: relative;
   z-index: 1;
   background: none;
+  padding-top: 0;
 
   .events-group {
     margin-bottom: 30px;
@@ -240,7 +241,7 @@ Main Components
       margin-right: 0;
 
       a {
-        padding: 1.2em;
+        padding: 0.7em;
       }
 
       &:last-of-type {
@@ -277,10 +278,10 @@ Main Components
 }
 
 .cd-schedule .event-name {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
 
   @include MQ(M) {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 .cd-schedule .event-more {
