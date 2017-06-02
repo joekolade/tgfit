@@ -69,13 +69,6 @@ page {
 
     includeJSFooterlibs {
         vendors = EXT:tgfit/Resources/Public/JavaScript/vendor.js
-#        v1 = EXT:tgfit/Resources/TemplateDevelopment/bower_components/jquery/dist/jquery.js
-#        v2 = EXT:tgfit/Resources/TemplateDevelopment/bower_components/bootstrap/dist/js/bootstrap.js
-#        v3 = EXT:tgfit/Resources/TemplateDevelopment/bower_components/chai/chai.js
-#        v4 = EXT:tgfit/Resources/TemplateDevelopment/bower_components/mocha/mocha.js
-#        v5 = EXT:tgfit/Resources/TemplateDevelopment/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js
-#        v6 = EXT:tgfit/Resources/TemplateDevelopment/bower_components/slick-carousel/slick/slick.js
-#        v7 = EXT:tgfit/Resources/TemplateDevelopment/bower_components/jQuery.mmenu/dist/jquery.mmenu.all.js
     }
 
     includeJSFooter {
