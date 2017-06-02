@@ -68,10 +68,10 @@ jQuery(document).ready(function($){
         this.singleEvents.each(function(){
             //create the .event-date element for each event
             var durationLabel = '<span class="event-date">'+$(this).data('start')+' - '+$(this).data('end')+'</span>';
-            $(this).children('a').prepend($(durationLabel));
+            $(this).find('> a').prepend($(durationLabel));
 
             //detect click on the event and open the modal
-            $(this).on('click', 'a', function(event){
+            $(this).on('click', 'a[href="#0"]', function(event){
                 event.preventDefault();
                 if( !self.animating ) self.openModal($(this));
             });
@@ -89,7 +89,6 @@ jQuery(document).ready(function($){
 
     SchedulePlan.prototype.placeEvents = function() {
         var self = this;
-        console.log(this.timelineUnitDuration);
         this.singleEvents.each(function(){
             //place each event in the grid -> need to set top position and height
             var start = getScheduleTimestamp($(this).attr('data-start')),
@@ -97,8 +96,6 @@ jQuery(document).ready(function($){
 
             var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
                 eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
-
-            console.log(eventTop);
 
             $(this).css({
                 top: (eventTop -1) +'px',
@@ -125,8 +122,8 @@ jQuery(document).ready(function($){
         //     //once the event content has been loaded
         //     self.element.addClass('content-loaded');
         // });
-        this.modalBody.find('.event-info').text('');
-        this.modalBody.find('.event-info').html(event.find('.event-info').html());
+        this.modalBody.find('.event-info').html('');
+        this.modalBody.find('.event-info').html(event.parent().find('.event-info').html());
         self.element.addClass('content-loaded');
 
         this.element.addClass('modal-is-open');

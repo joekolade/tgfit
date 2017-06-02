@@ -3,8 +3,8 @@
         <div class="event-name">
             <em>{data.tx_mask_eventtitle}</em>
         </div>
+    </a>
         <div class="event-info">
-
             <div>
                 <f:if condition="{data.tx_mask_eventinfo}">
                     <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_eventinfo}</f:format.html>
@@ -14,7 +14,5 @@
                     <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_eventmore}</f:format.html>
                 </f:if>
             </div>
-
         </div>
-    </a>
 </li>
