@@ -29,9 +29,11 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
     .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
+    // .pipe($.if(dev, $.sourcemaps.init()))
+    .pipe($.sourcemaps.init())
     .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
+    // .pipe($.if(dev, $.sourcemaps.write('.')))
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({stream: true}));
 });
@@ -184,7 +186,7 @@ gulp.task('t3copyJs', () => {
         'dist/scripts/**/*'
     ], {
         dot: true
-    }).pipe(gulp.dest('../Public/JavaScripts'));
+    }).pipe(gulp.dest('../Public/JavaScript'));
 });
 gulp.task('typo3', ['t3copyStyles'], () => {
     gulp.start('t3copyJs');

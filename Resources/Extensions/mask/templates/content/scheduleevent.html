@@ -1,14 +1,7 @@
-<li class="single-event" data-start="{data.tx_mask_eventstart}" data-end="{data.tx_mask_eventend}"
-    data-content="event-abs-circuit"
-    data-event="event__{data.tx_mask_eventarea}">
+<li class="single-event" data-start="{data.tx_mask_eventstart}" data-end="{data.tx_mask_eventend}" data-content="" data-event="event__{data.tx_mask_eventarea}">
     <a href="#0">
         <div class="event-name">
-            <h3>{data.eventtitle}</h3>
-            <f:if condition="{data.tx_mask_eventmore}">
-                <p class="event-more">
-                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_eventinfo}</f:format.html>
-                </p>
-            </f:if>
+            <h3>{data.tx_mask_eventtitle}</h3>
         </div>
         <div class="event-info">
 
@@ -16,7 +9,10 @@
                 <f:if condition="{data.tx_mask_eventinfo}">
                     <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_eventinfo}</f:format.html>
                 </f:if>
-                <!--@todo: Link zu coursika-->
+                <f:if condition="{data.tx_mask_eventmore}">
+                    <hr>
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_eventinfo}</f:format.html>
+                </f:if>
             </div>
 
         </div>

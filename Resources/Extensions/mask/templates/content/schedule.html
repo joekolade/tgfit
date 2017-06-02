@@ -1,4 +1,3 @@
-
 <div class="cd-schedule loading">
     <div class="timeline">
         <ul>
@@ -30,61 +29,142 @@
 
     <div class="events">
         <ul>
-            <f:if condition="{data.tx_mask_schedule1}">
-                <li class="events-group">
-                    <div class="top-info"><span>Montag</span></div>
+            <li class="events-group">
+                <div class="top-info"><span>Montag</span></div>
+                <f:if condition="{data.tx_mask_schedule1}">
 
                     <ul>
                         <f:for each="{data.tx_mask_schedule1}" as="data_item">
-                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
+                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
                         </f:for>
                     </ul>
-                </li>
-            </f:if>
-            <f:if condition="{data.tx_mask_schedule2}">
-                <li class="events-group">
-                    <div class="top-info"><span>Dienstag</span></div>
+                </f:if>
+            </li>
+            <li class="events-group">
+                <div class="top-info"><span>Dienstag</span></div>
+                <f:if condition="{data.tx_mask_schedule2}">
 
                     <ul>
                         <f:for each="{data.tx_mask_schedule2}" as="data_item">
-                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
+                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
                         </f:for>
                     </ul>
-                </li>
-            </f:if>
-            <f:if condition="{data.tx_mask_schedule3}">
-                <li class="events-group">
-                    <div class="top-info"><span>Mittwoch</span></div>
+                </f:if>
+            </li>
 
-                    <ul>
-                        <f:for each="{data.tx_mask_schedule3}" as="data_item">
-                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
-                        </f:for>
-                    </ul>
-                </li>
-            </f:if>
-            <f:if condition="{data.tx_mask_schedule4}">
-                <li class="events-group">
-                    <div class="top-info"><span>Donnerstag</span></div>
 
-                    <ul>
-                        <f:for each="{data.tx_mask_schedule4}" as="data_item">
-                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
-                        </f:for>
-                    </ul>
-                </li>
-            </f:if>
-            <f:if condition="{data.tx_mask_schedule5}">
-                <li class="events-group">
-                    <div class="top-info"><span>Freitag</span></div>
+            <li class="events-group">
+                <div class="top-info"><span>Donnerstag</span></div>
 
-                    <ul>
-                        <f:for each="{data.tx_mask_schedule5}" as="data_item">
-                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
-                        </f:for>
-                    </ul>
-                </li>
-            </f:if>
+                <ul>
+                    <li class="single-event" data-start="09:30" data-end="10:30"
+                        data-content="event-abs-circuit"
+                        data-event="event__gesundfit">
+                        <a href="#0">
+                            <em class="event-name">Abs Circuit</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="12:00" data-end="13:45"
+                        data-content="event-restorative-yoga" data-event="event__bgm">
+                        <a href="#0">
+                            <em class="event-name">Restorative Yoga</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="15:30" data-end="16:30"
+                        data-content="event-abs-circuit"
+                        data-event="event__gesundfit">
+                        <a href="#0">
+                            <em class="event-name">Abs Circuit</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="17:00" data-end="18:30"
+                        data-content="event-rowing-workout"
+                        data-event="event__f4l">
+                        <a href="#0">
+                            <em class="event-name">Rowing Workout</em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="events-group">
+                <div class="top-info"><span>Donnerstag</span></div>
+
+                <ul>
+                    <li class="single-event" data-start="09:30" data-end="10:30"
+                        data-content="event-abs-circuit"
+                        data-event="event__gesundfit">
+                        <a href="#0">
+                            <em class="event-name">Abs Circuit</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="12:00" data-end="13:45"
+                        data-content="event-restorative-yoga" data-event="event__bgm">
+                        <a href="#0">
+                            <em class="event-name">Restorative Yoga</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="15:30" data-end="16:30"
+                        data-content="event-abs-circuit"
+                        data-event="event__gesundfit">
+                        <a href="#0">
+                            <em class="event-name">Abs Circuit</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="17:00" data-end="18:30"
+                        data-content="event-rowing-workout"
+                        data-event="event__f4l">
+                        <a href="#0">
+                            <em class="event-name">Rowing Workout</em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="events-group">
+                <div class="top-info"><span>Donnerstag</span></div>
+
+                <ul>
+                    <li class="single-event" data-start="09:30" data-end="10:30"
+                        data-content="event-abs-circuit"
+                        data-event="event__gesundfit">
+                        <a href="#0">
+                            <em class="event-name">Abs Circuit</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="12:00" data-end="13:45"
+                        data-content="event-restorative-yoga" data-event="event__bgm">
+                        <a href="#0">
+                            <em class="event-name">Restorative Yoga</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="15:30" data-end="16:30"
+                        data-content="event-abs-circuit"
+                        data-event="event__gesundfit">
+                        <a href="#0">
+                            <em class="event-name">Abs Circuit</em>
+                        </a>
+                    </li>
+
+                    <li class="single-event" data-start="17:00" data-end="18:30"
+                        data-content="event-rowing-workout"
+                        data-event="event__f4l">
+                        <a href="#0">
+                            <em class="event-name">Rowing Workout</em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 
