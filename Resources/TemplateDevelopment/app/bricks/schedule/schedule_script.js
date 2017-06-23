@@ -1,5 +1,4 @@
 jQuery(document).ready(function($){
-    var timeSlotHeight = 50;
     var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
     var transitionsSupported = ( $('.csstransitions').length > 0 );
     //if browser does not support transitions - use a different event to trigger them
@@ -30,6 +29,8 @@ jQuery(document).ready(function($){
         this.modalMaxHeight = 480;
 
         this.animating = false;
+
+        console.log(this.timelineItemsNumber);
 
         this.initSchedule();
     }
@@ -99,7 +100,8 @@ jQuery(document).ready(function($){
 
             $(this).css({
                 top: (eventTop -1) +'px',
-                height: (eventHeight+1)+'px'
+                height: (eventHeight+1)+'px',
+                'min-height': (eventHeight+1)+'px'
             });
         });
 
