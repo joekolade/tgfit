@@ -60,6 +60,12 @@ plugin.tx_scriptmerger {
 }
 
 #
+# EXT:sourceopt
+#
+sourceopt.enabled = 1
+sourceopt.formatHtml = 2
+
+#
 # EXT:cs_seo
 #
 
