@@ -12,8 +12,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/fluid-styled-content.ts_constants">
 
 tgfit {
-    # domain = tgfit.de/typo3_dev
-    domain = tgfit.local
+    domain = www.tgfit.de
 }
 
 pageIds {
