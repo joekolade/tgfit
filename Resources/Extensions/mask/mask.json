@@ -64,6 +64,7 @@
                     "tx_mask_eventtitle",
                     "tx_mask_eventstart",
                     "tx_mask_eventend",
+                    "tx_mask_eventorientation",
                     "tx_mask_eventarea",
                     "tx_mask_eventinfo",
                     "tx_mask_eventmore"
@@ -72,13 +73,14 @@
                     "Kurstitel",
                     "Start",
                     "Ende",
+                    "Ausrichtung",
                     "Bereich",
                     "Info \/ Beschreibung",
                     "Meta-Info"
                 ],
                 "options": {
-                    "4": "rte",
-                    "5": "rte"
+                    "5": "rte",
+                    "6": "rte"
                 }
             },
             "teaserbox": {
@@ -161,6 +163,11 @@
             "tx_mask_eventend": {
                 "tt_content": {
                     "tx_mask_eventend": "tinytext"
+                }
+            },
+            "tx_mask_eventorientation": {
+                "tt_content": {
+                    "tx_mask_eventorientation": "tinytext"
                 }
             },
             "tx_mask_eventarea": {
@@ -451,6 +458,40 @@
                 "exclude": "1",
                 "key": "eventend"
             },
+            "tx_mask_eventorientation": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "normal",
+                            "0"
+                        ],
+                        [
+                            "links",
+                            "1"
+                        ],
+                        [
+                            "zentriert",
+                            "2"
+                        ],
+                        [
+                            "rechts",
+                            "3"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "eventorientation"
+            },
             "tx_mask_eventarea": {
                 "config": {
                     "type": "select",
@@ -489,8 +530,6 @@
                 "config": {
                     "type": "text",
                     "eval": "",
-                    "richtextConfiguration": "default",
-                    "enableRichtext": "1",
                     "cols": "",
                     "rows": "",
                     "default": "",
@@ -498,14 +537,13 @@
                     "max": ""
                 },
                 "exclude": "1",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
                 "key": "eventinfo"
             },
             "tx_mask_eventmore": {
                 "config": {
                     "type": "text",
                     "eval": "",
-                    "richtextConfiguration": "default",
-                    "enableRichtext": "1",
                     "cols": "24",
                     "rows": "",
                     "default": "",
@@ -513,6 +551,7 @@
                     "max": ""
                 },
                 "exclude": "1",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
                 "key": "eventmore"
             }
         }
