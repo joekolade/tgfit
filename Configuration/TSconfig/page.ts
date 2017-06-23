@@ -27,8 +27,6 @@ tx_gridelements {
                         name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.leftColumn
                         colPos = 101
                     }
-
-
                     2 {
                         name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.centerColumn
                         colPos = 102
@@ -72,13 +70,13 @@ tx_gridelements {
                     4 < .1
                     4 {
                         name = Donnerstag
-                        colPos = 103
+                        colPos = 104
                         allowed = mask_scheduleevent
                     }
                     5 < .1
                     5 {
                         name = Freitag
-                        colPos = 103
+                        colPos = 105
                         allowed = mask_scheduleevent
                     }
                 }
