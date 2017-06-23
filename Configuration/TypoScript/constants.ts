@@ -12,16 +12,14 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/fluid-styled-content.ts_constants">
 
 tgfit {
-  # domain = tgfit.de/typo3_dev
-  domain = tgfit.local
+    # domain = tgfit.de/typo3_dev
+    domain = tgfit.local
 }
-
 
 pageIds {
-  root = 1
-  infoRoot = 4
+    root = 1
+    infoRoot = 4
 }
-
 
 styles.content.loginform.pid = 0
 styles.content.textmedia.maxW = 900
@@ -34,30 +32,31 @@ styles.content.textmedia.linkWrap.height = 720m
 #
 
 plugin.tx_scriptmerger {
-  css {
-    enable = 0
-    minify.enable = 1
-    #minify.ignore = .min.
+    css {
+        enable = 1
+        minify.enable = 1
+        #minify.ignore = .min.
 
-    compress.enable = 0
-    #compress.ignore = .gz.
+        compress.enable = 0
+        #compress.ignore = .gz.
 
-    merge.enable = 1
-    #merge.ignore = empty
-  }
-  javascript {
-    enable = 1
-    parseBody = 0
+        merge.enable = 1
+        #merge.ignore = empty
+    }
 
-    minify.enable = 1
-    #minify.ignore = ?,.min.
+    javascript {
+        enable = 1
+        parseBody = 1
 
-    compress.enable = 0
-    #compress.ignore = ?,.gz.
+        minify.enable = 1
+        #minify.ignore = ?,.min.
 
-    merge.enable = 1
-    #merge.ignore
-  }
+        compress.enable = 0
+        #compress.ignore = ?,.gz.
+
+        merge.enable = 1
+        #merge.ignore
+    }
 }
 
 #
