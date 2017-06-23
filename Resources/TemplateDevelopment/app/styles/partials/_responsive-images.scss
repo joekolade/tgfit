@@ -1,0 +1,74 @@
+// Responsive Images fuer TYPO3 Fluid Styled Content
+//
+// blog.teamgeist-medien.de
+
+.img-responsive {
+  img, picture {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+figcaption {
+  margin-top: 0.5em;
+  font-size: $font-size-small;
+}
+.ce-textpic * {
+  width: 100%;
+  height: auto;
+}
+
+.ce-gallery {
+  > .ce-outer > .ce-inner > .ce-row {
+    display: flex;
+    margin-bottom: 8px;
+    .ce-column {
+      padding-right: 10px;
+      margin-right: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &[data-ce-columns="1"] {
+    > .ce-outer > .ce-inner > .ce-row {
+      .ce-column {
+        width: 100%;
+      }
+    }
+  }
+
+  &[data-ce-columns="2"] {
+    > .ce-outer > .ce-inner > .ce-row {
+      .ce-column {
+        width: 50%;
+      }
+    }
+  }
+
+  &[data-ce-columns="3"] {
+    > .ce-outer > .ce-inner > .ce-row {
+      .ce-column {
+        width: 33%;
+      }
+    }
+  }
+
+  &[data-ce-columns="4"] {
+    > .ce-outer > .ce-inner > .ce-row {
+      .ce-column {
+        width: 25%;
+      }
+    }
+  }
+
+  &[data-ce-columns="5"] {
+    > .ce-outer > .ce-inner > .ce-row {
+      .ce-column {
+        width: 20%;
+      }
+    }
+  }
+}

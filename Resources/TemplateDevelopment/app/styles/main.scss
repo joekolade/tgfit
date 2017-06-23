@@ -59,5 +59,8 @@ body {
 @import 'blocks/stage';
 @import 'blocks/slickslider';
 
+// partials
+@import 'partials/responsive-images';
+
 // bricks
 @import '../bricks/schedule/schedule_styles';
