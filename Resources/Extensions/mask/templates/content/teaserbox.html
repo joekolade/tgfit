@@ -9,6 +9,7 @@
       <figcaption>{data.header}</figcaption>
     </f:if>
   </figure>
+  {data.header_link}
   <f:link.page pageUid="{data.header_link}">
     <f:if condition="{data.bodytext}">
       <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
