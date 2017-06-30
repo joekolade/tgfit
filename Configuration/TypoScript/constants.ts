@@ -68,7 +68,9 @@ sourceopt.formatHtml = 1
 # EXT:cs_seo
 #
 
+plugin.tx_csseo.tracking.googleAnalytics = UA-101918050-1
 plugin.tx_csseo.social.defaultImage = typo3conf/ext/tgfit/Resources/Public/Images/TG_RGB.jpg
 plugin.tx_csseo.social.openGraph.image.width = 1187
 plugin.tx_csseo.social.openGraph.image.height = 658c
 plugin.tx_csseo.hreflang.enable = 0
+
