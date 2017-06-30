@@ -9,10 +9,12 @@
       <figcaption>{data.header}</figcaption>
     </f:if>
   </figure>
-  <f:if condition="{data.bodytext}">
-    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
-  </f:if>
-  <f:if condition="{data.header_link}">
-      <f:link.page class="btn teaser--btn_{data.tx_mask_tgfit_area}" pageUid="{data.header_link}">zu den Angeboten</f:link.page>
-  </f:if>
+  <f:link.page pageUid="{data.image.0.link}">
+    <f:if condition="{data.bodytext}">
+      <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+    </f:if>
+    <f:if condition="{data.header_link}">
+        <f:link.page class="btn teaser--btn_{data.tx_mask_tgfit_area}" pageUid="{data.header_link}">zu den Angeboten</f:link.page>
+    </f:if>
+  </f:link.page>
  </div>
