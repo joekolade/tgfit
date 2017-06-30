@@ -1,13 +1,15 @@
 <div class="teaser teaser_{data.tx_mask_tgfit_area}">
   <figure>
     <f:if condition="{data.image.0}">
-      <f:image image="{data.image.0}" alt="{data.header}" title="{data.header}" class="img-responsive" width="708" />
+      <f:link.page pageUid="{data.header_link}">
+        <f:image image="{data.image.0}" alt="{data.header}" title="{data.header}" class="img-responsive" width="708" />
+      </f:link.page>
     </f:if>
     <f:if condition="{data.header}">
       <figcaption>{data.header}</figcaption>
     </f:if>
   </figure>
-  <f:link.page pageUid="{data.tx_mask_tgfit_link}">
+  <f:link.page pageUid="{data.header_link}">
     <f:if condition="{data.bodytext}">
       <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
     </f:if>
