@@ -52,14 +52,6 @@ page {
         }
     }
 }
-config.meta {
-    # Viewport
-    viewport = width=device-width, initial-scale=1
-    #viewport = width=device-width, initial-scale=1.0, minimal-ui, user-scalable=no, maximum-scale=1.0
-
-    X-UA-Compatible = IE=edge
-    X-UA-Compatible.httpEquivalent = 1
-}
 
 
 /**
@@ -275,3 +267,27 @@ lib {
 }
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.txt">
+
+
+config.meta {
+    # Viewport
+    viewport = width=device-width, initial-scale=1
+    #viewport = width=device-width, initial-scale=1.0, minimal-ui, user-scalable=no, maximum-scale=1.0
+
+    X-UA-Compatible = IE=edge
+    X-UA-Compatible.httpEquivalent = 1
+}
+
+# JS Comment in the <head> tag
+
+config.headerComment (
+**********************************************************
+*/*                                                    */*
+*/*      Schäfer - Büro für Webentwicklung             */*
+*/*                                                    */*
+*/*      Biberach                                      */*
+*/*      schaefer-webentwicklung.de                    */*
+*/*      mail@schaefer-webentwicklung.de               */*
+*/*                                                    */*
+**********************************************************
+)
