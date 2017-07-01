@@ -52,6 +52,15 @@ page {
         }
     }
 }
+config.meta {
+    # Viewport
+    viewport = width=device-width, initial-scale=1
+    #viewport = width=device-width, initial-scale=1.0, minimal-ui, user-scalable=no, maximum-scale=1.0
+
+    X-UA-Compatible = IE=edge
+    X-UA-Compatible.httpEquivalent = 1
+}
+
 
 /**
 * Favicons
