@@ -269,7 +269,7 @@ lib {
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_grids/Configuration/TypoScript/setup.txt">
 
 
-config.meta {
+page.meta {
     # Viewport
     viewport = width=device-width, initial-scale=1
     #viewport = width=device-width, initial-scale=1.0, minimal-ui, user-scalable=no, maximum-scale=1.0
