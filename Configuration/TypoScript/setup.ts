@@ -9,7 +9,7 @@
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:mask/Configuration/TypoScript/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/gridelements_setup.ts">
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/pxa_cookie_bar/tx_pxacookie_bar_setup.ts">
 
 /**
 * Fix missing styles.content.get

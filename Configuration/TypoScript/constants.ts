@@ -10,6 +10,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sourceopt/Configuration/TypoScript/constants.txt">
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/fluid-styled-content.ts_constants">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgfit/Configuration/TypoScript/Extensions/pxa_cookie_bar/tx_pxacookie_bar_constants.ts">
 
 tgfit {
     domain = www.tgfit.de
